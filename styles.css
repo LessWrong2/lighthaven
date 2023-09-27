@@ -22,7 +22,7 @@ a:hover {
 
 p, li {
   font-family: verdigris-mvb-pro-text, serif;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.4;
   margin-bottom: 1em;
 }
@@ -149,7 +149,7 @@ h3 {
   font-family: verdigris-mvb-pro-text, serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
+  font-size: 16px;
   line-height: 22px;
   color: rgba(102, 102, 102, 0.7);
 }
@@ -165,7 +165,7 @@ h3 {
   /* gap: 60px; */
 }
 
-.job {
+.panel {
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -175,6 +175,10 @@ h3 {
   /* max-width: 300px; */
   min-width: 300px;
   flex: 1;
+}
+
+.panel p {
+  font-size:18px;
 }
 
 .jobs {
@@ -194,7 +198,7 @@ h4 {
   fill: hsl(40deg 79% 52%);
 }
 
-.job button {
+.panel button {
   margin-top: auto;
   border: 0px;
   background: none;
@@ -202,23 +206,23 @@ h4 {
   padding: 0px;
 }
 
-.job svg, .job img {
+.panel svg, .panel img {
   height: 1.5em;
   margin-right: 8px
 }
 
-.job h4 {
+.panel h4 {
   display: flex;
   align-items: center;
 }
 
-.job-posting {
+.panel-posting {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.job-posting h1 {
+.panel-posting h1 {
   margin-top: 50px;
 }
 
