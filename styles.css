@@ -166,7 +166,8 @@ h3 {
 }
 
 .job {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 16px;
   background: #FFFFFF;
   box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.1);
@@ -194,6 +195,7 @@ h4 {
 }
 
 .job button {
+  margin-top: auto;
   border: 0px;
   background: none;
   color: #ebba57;
