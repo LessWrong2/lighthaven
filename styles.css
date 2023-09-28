@@ -127,6 +127,12 @@ p a {
   min-width: 300px;
 }
 
+@media (max-width: 650px) { 
+  .CTA-button-navbar {
+      display: none;     
+  }   
+}
+
 h1 {
   font-size: 50px;
   margin-bottom: 20px;
