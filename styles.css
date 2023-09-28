@@ -16,10 +16,6 @@ a:hover {
   opacity: 50%;
 }
 
-.linkstyle {
-  color: hsl(40deg 79% 52%);
-}
-
 p, li {
   font-family: verdigris-mvb-pro-text, serif;
   font-size: 20px;
@@ -93,6 +89,11 @@ p a {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
+.CTA-button-center:hover {
+  opacity: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
 .top-image {
   width: 250px;
   height: 250px;
@@ -102,7 +103,8 @@ p a {
 .campus-image {
   width: 40%;
   margin-right: 50px;
-  margin-top:50px;
+  margin-top:auto;
+  margin-bottom:auto;
 }
 
 .banner-section {
