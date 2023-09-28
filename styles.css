@@ -1,6 +1,6 @@
 body {
   font-family: verdigris-mvb-pro-text, serif;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   padding: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -99,20 +99,28 @@ p a {
   margin-bottom: 36px;
 }
 
+.campus-image {
+  width: 40%;
+  margin-right: 50px;
+  margin-top:50px;
+}
+
 .banner-section {
   display: flex;
+
   row-gap: 12px;
   column-gap: 50px;
   /* flex-flow: row wrap; */
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap-reverse;
   /* align-content: center; */
   /* justify-items: center; */
   justify-content: center;
 }
 .text-section {
-  /* width: 60%; */
-  /* padding-top: 50px; */
+  width: 60%;
+  max-width: 550px;
+  padding-top: 50px;
   flex: 3.5;
   min-width: 300px;
 }
@@ -126,7 +134,7 @@ h1 {
   /* color: rgba(50,50,50); */
 }
 .image-section {
-  /* width: 40%; */
+  width: 50%;
   /* max-width: 300px; */
   justify-self: center;
   align-self: center;
@@ -142,7 +150,7 @@ h2 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgb(80 80 80 / 80%);
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   margin-top: 75px;
   font-weight: 300;
 }
@@ -266,4 +274,11 @@ h4 {
   min-width: 250px;
   flex: 1;
   display: block;
+}
+
+.buildings p {
+  font-size: 18px;
+}
+.buildings b {
+  font-variant: small-caps;
 }
