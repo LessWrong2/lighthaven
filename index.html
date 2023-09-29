@@ -24,60 +24,33 @@
         <img class="logo-image"
           src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
         />
-        <div>Lighthaven</div>
+        <div class="navbar-title">Lighthaven</div>
       </a>
       <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button-navbar">
         Book an Event
       </a>
     </div>
     <div class="content-area">
-          <section>
-            <img class="splash-image" src="/public/splash_image_campus_map.jpg"/>
-            <div class="splash-text">
-              <h1>Lighthaven</h1>
-              <p>A campus located in Berkeley, California.<br/>
-                It's run by Lightcone Infrastructure.
-              </p>
-              <div class="cta-row">
-                <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
-                  Chat with us
-                </a>
-                <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button secondary">
-                      Book an Event
-                  </a>
-              </div>
-            </div>
-          </section>
-
-<!--      <section class="center-section">-->
-<!--        <img class="top-image" src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1695841034/lighthaven_logo_ruab6b.png"/>-->
-<!--        <h1>Lighthaven</h1>-->
-<!--        <div>-->
-<!--          <p>-->
-<!--            A campus located in Berkeley, California.-->
-<!--          </p>-->
-<!--          &lt;!&ndash; <p>-->
-<!--            It’s run by Lightcone Infrastructure, and we hope to use this place to make the future of humanity go better than it would go otherwise.-->
-<!--          </p> &ndash;&gt;-->
-<!--        </div>-->
-<!--        <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button-center">-->
-<!--          Book an Event-->
-<!--        </a>-->
-<!--        <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button-chat">-->
-<!--          Chat with us-->
-<!--        </a>-->
-<!--      </section>-->
+      <section class="splash-section">
+        <img class="splash-image" src="./public/splash_image_campus_map.jpg"/>
+        <div class="splash-text">
+          <h1>Lighthaven</h1>
+          <p><em>A campus located in Berkeley, California.</em></p>
+          <div class="cta-row">
+            <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
+              Chat with us
+            </a>
+            <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button secondary">
+              Book an Event
+            </a>
+          </div>
+        </div>
+      </section>
       <section>
         <div class="photo-row">
           <a href="public/crowd-stuart-park.jpg" class="photo-link" target="_blank">
             <img class="photo" src="public/crowd-stuart-park-square.jpg"/>
           </a>
-          <!-- <a href="public/arial-shot.jpg" class="photo-link">
-            <img class="photo" src="public/arial-shot-square.jpg"/>
-          </a> -->
-          <!-- <a href="public/front-room.jpg" class="photo-link">
-            <img class="photo" src="public/front-room-square.jpg"/>
-          </a> -->
           <a href="public/building-b-lobby.jpg" class="photo-link" target="_blank">
             <img class="photo" src="public/building-b-lobby-square.jpg"/>
           </a>
@@ -100,11 +73,6 @@
           Host Your Event
         </h2>
       </section>
-      <!-- <section class="center-section">
-        <p>
-          The space is huge and very modular, and can accommodate a lot of different types of events.
-        </p>
-      </section> -->
       <section class="events">
           <div class="event" href="lesswrong-software.html">
             <img src="public/people-at-retreat.jpg"/>
@@ -117,7 +85,6 @@
                 We offer cozy nooks with firepits, discussion rooms with endless whiteboards, and up to 46 bedrooms (with up to 70 beds).
               </p>
             </div>
-            <!-- <button>Learn More</button> -->
           </div>
           <div class="event">
             <img src="public/parties.jpg"/>
@@ -130,7 +97,6 @@
                 From private dinners to 500 person parties. Sound setup, music, private kitchens, snacks, catering.
               </p>
             </div>
-            <!-- <button>Learn More</button> -->
           </div>
           <div class="event" href="s-process-developer.html">
             <img src="public/conferences.jpg"/>
@@ -250,18 +216,6 @@
         </div>
       </section>
       <section class="center-section">
-        <h2>About Lightcone</h2>
-        <div>
-          <p>Lighthaven is a project by <a href="http://www.lightconeinfrastructure.com">Lightcone Infrastructure</a>.</p>
-          <p>We build tools and services we think will help humanity flourish into the long term future. We also run <a href="https://lesswrong.com">LessWrong.com</a> and the <a href="https://alignmentforum.org">Alignment Forum</a>.</p>
-          <p>
-            <img class="end-logo"
-            src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
-          />
-          </p>
-        </div>
-      </section>
-      <section class="center-section">
         <h2>Gallery</h2>
         <div class="photo-row-wide">
           <a href="public/6x4/_DSC6834.jpg" class="photo-link-wide" target="_blank">
@@ -304,6 +258,18 @@
           <a href="public/6x4/_DSC8471.jpg" class="photo-link-wide" target="_blank">
             <img class="photo-wide" src="public/6x4/_DSC8471.jpg"/>
           </a>
+        </div>
+      </section>
+      <section class="center-section">
+        <h2>About Lightcone</h2>
+        <div>
+          <p>Lighthaven is a project by <a href="http://www.lightconeinfrastructure.com">Lightcone Infrastructure</a>.</p>
+          <p>We build tools and services we think will help humanity flourish into the long term future. We also run <a href="https://lesswrong.com">LessWrong.com</a> and the <a href="https://alignmentforum.org">Alignment Forum</a>.</p>
+          <p>
+            <img class="end-logo"
+            src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
+          />
+          </p>
         </div>
       </section>
       <hr/>
