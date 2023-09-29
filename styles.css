@@ -217,7 +217,7 @@ h4 {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
-  color: hsl(40deg 79% 52%);
+  color:  rgb(209, 164, 109);
   margin-bottom: 15px;
   fill: hsl(40deg 79% 52%);
 }
@@ -307,19 +307,24 @@ h4 {
 .buildings b {
   font-variant: small-caps;
   font-size: 18px;
+  font-weight:500;
 }
 
 .photo-row {
+  margin-left:-30px;
+  margin-right:-30px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin-top:100px;
   max-height: 680px;
   overflow: hidden;
+  background-color: rgb(236, 228, 216);
+  margin-bottom:20px;
 }
 
 .photo-link {
-  width: 340px;
+  min-width: 320px;
+  width: 320px;
   height: 340px;
   display:flex;
   justify-content: center;
@@ -351,21 +356,18 @@ h4 {
 }
 @media (max-width: 735px) { 
   .photo-link {
-    width: calc(50% - 16px);
-    height: fit-content;
+    width: 170px;
+    height: 180px;
+    min-width:170px;
     margin: 8px;
   }
 
   .p {
     font-size: 18px;
   }
-
-  .photo-row {
-    max-height: unset;
-  }
   
   .photo {
-    width: 100%;
+    width: 170px;
     object-fit: contain;
     height: fit-content;
     margin: 8px;
