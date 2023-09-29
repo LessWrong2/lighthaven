@@ -16,12 +16,12 @@
         app_id: APP_ID
       };
     </script>
-    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>    
+    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
   </head>
   <body>
     <div class="navbar">
       <a href="index.html" class="logo">
-        <img class="logo-image" 
+        <img class="logo-image"
           src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
         />
         <div>Lighthaven</div>
@@ -31,24 +31,42 @@
       </a>
     </div>
     <div class="content-area">
-      <section class="center-section">
-        <img class="top-image" src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1695841034/lighthaven_logo_ruab6b.png"/>
-        <h1>Lighthaven</h1>
-        <div>
-          <p>
-            A campus located in Berkeley, California.
-          </p>
-          <!-- <p>
-            It’s run by Lightcone Infrastructure, and we hope to use this place to make the future of humanity go better than it would go otherwise.
-          </p> -->
-        </div>
-        <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button-center">
-          Book an Event
-        </a>
-        <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button-chat">
-          Chat with us
-        </a>
-      </section>
+          <section>
+            <img class="splash-image" src="/public/splash_image_campus_map.jpg"/>
+            <div class="splash-text">
+              <h1>Lighthaven</h1>
+              <p>A campus located in Berkeley, California.<br/>
+                It's run by Lightcone Infrastructure.
+              </p>
+              <div class="cta-row">
+                <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
+                  Chat with us
+                </a>
+                <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button secondary">
+                      Book an Event
+                  </a>
+              </div>
+            </div>
+          </section>
+
+<!--      <section class="center-section">-->
+<!--        <img class="top-image" src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1695841034/lighthaven_logo_ruab6b.png"/>-->
+<!--        <h1>Lighthaven</h1>-->
+<!--        <div>-->
+<!--          <p>-->
+<!--            A campus located in Berkeley, California.-->
+<!--          </p>-->
+<!--          &lt;!&ndash; <p>-->
+<!--            It’s run by Lightcone Infrastructure, and we hope to use this place to make the future of humanity go better than it would go otherwise.-->
+<!--          </p> &ndash;&gt;-->
+<!--        </div>-->
+<!--        <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button-center">-->
+<!--          Book an Event-->
+<!--        </a>-->
+<!--        <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button-chat">-->
+<!--          Chat with us-->
+<!--        </a>-->
+<!--      </section>-->
       <section>
         <div class="photo-row">
           <a href="public/crowd-stuart-park.jpg" class="photo-link" target="_blank">
@@ -148,15 +166,15 @@
             You can use your own caterer, but our default caterer offers meals from $20/meal to $50/meal that most visitors have found quite satisfying.
           </p>
           <p>
-            We do engage in some price discrimination. If we think your best alternative to our venue would be much more expensive, we may charge more than our listed price. We try to find a fair price that splits the difference between our own costs and the value you get out of the space. 
+            We do engage in some price discrimination. If we think your best alternative to our venue would be much more expensive, we may charge more than our listed price. We try to find a fair price that splits the difference between our own costs and the value you get out of the space.
           </p>
           <p>
             We also provide more bespoke services (see below), though we generally charge more for this.
           </p>
           <p>
             Overall we try to be reasonable about pricing, and don't expect to make much profit on the space.
-          </p>  
-        </div>        
+          </p>
+        </div>
       </section>
       <section class="center-section">
         <h2>Campus Spaces</h2>
@@ -237,7 +255,7 @@
           <p>Lighthaven is a project by <a href="http://www.lightconeinfrastructure.com">Lightcone Infrastructure</a>.</p>
           <p>We build tools and services we think will help humanity flourish into the long term future. We also run <a href="https://lesswrong.com">LessWrong.com</a> and the <a href="https://alignmentforum.org">Alignment Forum</a>.</p>
           <p>
-            <img class="end-logo" 
+            <img class="end-logo"
             src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
           />
           </p>
