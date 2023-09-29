@@ -5,6 +5,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: #666666;
+  background: url("public/background.jpg") no-repeat top center;
 }
 
 a {
