@@ -149,25 +149,20 @@ h1 {
 
 .splash-text {
   width: 420px;
-  top: calc(50% + 155px);
-  left: calc(50% - 366px);
+  top: 600px;
+  left: calc(50% - 360px);
   position: absolute;
   text-align: center;
 }
 
-@media (max-width: 1000px) {
-  .splash-text {
-    top: calc(50% + 95px);
-  }
-}
 @media (max-width: 900px) {
   .splash-text {
-    top: calc(50% - 20px);
+    top: 525px;
   }
 }
 @media (max-width: 800px) {
   .splash-text {
-    top: calc(50% - 40px);
+    top: 450px;
   }
 }
 @media (max-width: 750px) {
