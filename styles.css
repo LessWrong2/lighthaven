@@ -278,11 +278,34 @@ h4 {
   display: block;
 }
 
-.buildings p {
+.buildings p, .buildings li {
   font-size: 18px;
+}
+.buildings li {
+    position: relative;
+    list-style-type: none;
+}
+
+.buildings li::before {
+    content: ''; /* Empty content */
+    width: 7px; /* Square size */
+    height: 7px; /* Square size */
+    border-radius:50%;
+    background: #aaa; /* Color of the square */
+    font-size: 20px; /* Adjust size as needed */
+    position: absolute;
+    left: -25px; /* Adjust position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buildings ul {
+  margin-top: 6px;
+  margin-bottom:6px;
 }
 .buildings b {
   font-variant: small-caps;
+  font-size: 18px;
 }
 
 .photo-row {
