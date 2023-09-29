@@ -447,19 +447,15 @@ h4 {
 }
 
 .photo-wide {
-  width: 400px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out; 
-  padding: 20px;
-  border-radius:5px;
-}
-
-.photo-link-wide {
   min-width: 320px;
   width: 320px;
   display:flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; 
+  padding: 20px;
+  border-radius:5px;
 }
 
 .photo:hover {
@@ -468,7 +464,48 @@ h4 {
   height: 310px; */
 }
 
-@media (max-width: 500px) {
+/* Styles for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#prev-button,
+#next-button {
+  cursor: pointer;
+  font-size: 32px;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+/* Style for the close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-photo {
+  width: 800px
+}
+
+@media (max-width: 500px) { 
   .CTA-button-navbar {
       display: none;
   }
