@@ -65,12 +65,14 @@ modal.addEventListener("click", function (event) {
   }
 });
 
-// Add keydown event listener for arrow keys
+// Add keydown event listener for arrow keys for modal navigation, and escape for closing it
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowLeft") {
     previousImage();
   } else if (event.key === "ArrowRight") {
     nextImage();
+  } else if (event.key === "Escape") {
+    closeModal();
   }
 });
 
