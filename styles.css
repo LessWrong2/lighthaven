@@ -290,3 +290,33 @@ h4 {
 .buildings b {
   font-variant: small-caps;
 }
+
+.photo-row {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-link {
+  width: 340px;
+  height: 340px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-link:hover {
+  opacity:1;
+}
+
+.photo {
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; 
+  margin: 20px;
+  border-radius:5px;
+}
+
+.photo:hover {
+  width: 305px;
+  height: 305px;
+}
