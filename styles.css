@@ -353,7 +353,7 @@ h4 {
 .event img {
   height: 300px;
   width: 300px;
-  margin-left: -20px;
+  margin-left: 0px;
   padding-bottom: 24px;
 }
 
@@ -430,7 +430,7 @@ h4 {
   opacity:1;
 }
 
-.photo {
+.event-photo {
   width: 300px;
   height: 300px;
   cursor: pointer;
