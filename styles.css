@@ -18,7 +18,7 @@ a:hover {
 
 p, li {
   font-family: verdigris-mvb-pro-text, serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.4;
   margin-bottom: 1em;
 }
@@ -520,8 +520,8 @@ h4 {
   margin-right: auto;
   margin-top: 75px;
   margin-bottom: 75px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   opacity: .5
 }
 
@@ -533,8 +533,29 @@ h4 {
 .testimonial {
   max-width: 35%;
   padding: 24px 48px;
+  background: #efefef;
+  padding: 36px 40px;
+  margin: 24px;
+  border-radius:5px;
 }
+.testimonial p:last-of-type {
+  margin-bottom: 0px;
+}
+
 .testimonial p {
   font-size: 18px;
-  color: #888;
+  /* color: #888; */
+}
+.testimonial-author {
+  text-align: right;
+}
+@media (max-width: 1000px) {
+  .testimonial {
+    max-width: 50%;
+  }
+}
+@media (max-width: 750px) {
+  .testimonial {
+    max-width: 100%;
+  }
 }
