@@ -6,9 +6,6 @@ var closeButton = document.getElementsByClassName("close")[0];
 var nextButton = document.getElementById("next-button");
 var prevButton = document.getElementById("prev-button");
 
-// Get the gallery container
-var galleryRows = document.getElementsByClassName("photo-gallery");
-
 // Get all the image links in the gallery
 var imageLinks = Array.from(document.getElementsByClassName("photo-gallery-image"))
 
