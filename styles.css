@@ -520,7 +520,7 @@ h4 {
   .photo {
     width: 170px;
     object-fit: contain;
-    height: fit-content;
+    height: auto;
     margin: 8px;
   }
 
@@ -532,7 +532,7 @@ h4 {
 
   .event img {
     width: calc(50% - 36px);
-    height: fit-content;
+    height: auto;
     margin-right: 24px;
   }
 
