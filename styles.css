@@ -436,7 +436,7 @@ h4 {
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 100%;
   width: 1500px;
   justify-content: center;
 }
