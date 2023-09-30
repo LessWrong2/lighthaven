@@ -419,7 +419,7 @@ h4 {
   align-items: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out; 
-  padding: 20px;
+  margin: 20px;
   border-radius:5px;
 }
 
@@ -535,12 +535,13 @@ h4 {
   padding: 24px 48px;
   background: #efefef;
   color:rgba(0, 0, 0, 0.8);
-  padding: 36px 40px;
+  padding: 36px 36px 30px 36px;
   margin: 24px;
   border-radius:5px;
 }
 .testimonial p:last-of-type {
   margin-bottom: 0px;
+  color: #888;
 }
 
 .testimonial p {
@@ -552,6 +553,7 @@ h4 {
 }
 @media (max-width: 1000px) {
   .testimonial {
+    margin: 16px;
     max-width: 50%;
   }
 }
