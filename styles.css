@@ -422,6 +422,31 @@ h4 {
   margin: 20px;
   border-radius:5px;
 }
+.photo-mosaic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 210px; /* Adjusted to set a minimum row height */
+  grid-gap: 10px; /* Adjusted the grid gap to ensure it's not larger than 10px */
+  margin: 0 auto; /* Adjusted to center the content horizontally */
+  max-width: 1350px;
+  padding: 10px; /* Added padding to ensure content is not against the container edges */
+}
+
+.photo-mosaic .small {
+  width: 100%; /* Adjusted to ensure the content scales with the grid */
+  height: 100%; /* Adjusted to ensure the content scales with the grid */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.large {
+  grid-column: span 2; 
+  grid-row: span 2;    
+  width: 100%; /* Adjusted to ensure the content scales with the grid */
+  height: 100%; /* Adjusted to ensure the content scales with the grid */
+  object-fit: cover;
+  border-radius: 5px;
+}
 
 .photo:hover {
   opacity:.8  ;
