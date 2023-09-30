@@ -11,7 +11,6 @@ var galleryRows = document.getElementsByClassName("photo-gallery");
 
 // Get all the image links in the gallery
 var imageLinks = Array.from(document.getElementsByClassName("photo-gallery-image"))
-console.log(imageLinks)
 
 // Variables to track the currently displayed image and total number of images
 var currentImageIndex = 0;
