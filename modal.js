@@ -6,13 +6,8 @@ var closeButton = document.getElementsByClassName("close")[0];
 var nextButton = document.getElementById("next-button");
 var prevButton = document.getElementById("prev-button");
 
-// Get the gallery container
-var galleryRows = document.getElementsByClassName("photo-gallery");
-
 // Get all the image links in the gallery
-var imageLinks = Array.from(galleryRows).flatMap((row) =>
-  Array.from(row.querySelectorAll(".photo-gallery-image"))
-);
+var imageLinks = Array.from(document.getElementsByClassName("photo-gallery-image"))
 
 // Variables to track the currently displayed image and total number of images
 var currentImageIndex = 0;
