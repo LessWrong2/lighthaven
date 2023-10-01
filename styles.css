@@ -7,6 +7,13 @@ body {
   color: #666666;
 }
 
+@media (max-width: 800px) {
+  body {
+    padding: 15px;
+  }
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
@@ -492,7 +499,7 @@ h4 {
 }
 
 .modal-photo {
-  width: 800px
+  max-height:95vh;
 }
 
 @media (max-width: 500px) { 
@@ -523,6 +530,7 @@ h4 {
     flex-direction: row;
     align-items: center;
     max-width: unset;
+    padding: 4px;
   }
 
   .event img {
@@ -585,5 +593,7 @@ h4 {
 @media (max-width: 750px) {
   .testimonial {
     max-width: 100%;
+    margin:0;
+    padding: 24px;
   }
 }
