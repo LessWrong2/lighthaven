@@ -345,6 +345,10 @@ h4 {
   flex: 1;
   display: block;
 }
+.buildings {
+  margin-bottom:auto;
+  margin-top:auto;
+}
 
 .buildings p, .buildings li {
   font-size: 18px;
@@ -367,10 +371,6 @@ h4 {
   transform: translateY(-50%);
 }
 
-.buildings ul {
-  margin-top: 6px;
-  margin-bottom:6px;
-}
 .buildings b {
   font-variant: small-caps;
   font-size: 18px;
