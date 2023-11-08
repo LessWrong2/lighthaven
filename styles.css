@@ -238,19 +238,25 @@ h2 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgb(80 80 80 / 80%);
-  margin-bottom: 50px;
-  margin-top: 75px;
   font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h3 {
   font-family: verdigris-mvb-pro-text, serif;
   font-style: normal;
-  font-weight: bold;
   font-size: 23px;
   line-height: 25px;
+  font-weight: 500;
   color: #666666;
+  margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.title {
+  margin-bottom: 50px;
+  margin-top: 60px;
 }
 
 .content-area {
