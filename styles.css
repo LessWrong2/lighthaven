@@ -722,3 +722,23 @@ h4 {
   color: white;
   text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 }
+
+.rooms {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.room-photo {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 1340px) {
+  .room-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
