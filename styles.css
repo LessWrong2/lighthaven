@@ -742,3 +742,37 @@ h4 {
     height: 200px;
   }
 }
+
+.room-row {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.room-gallery {
+  width: 400px;
+}
+
+.room-mosaic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px; /* Adjusted to set a minimum row height */
+  grid-gap: 10px; /* Adjusted the grid gap to ensure it's not larger than 10px */
+  padding: 10px; /* Added padding to ensure content is not against the container edges */
+}
+
+.room-mosaic .small {
+  width: 100%; /* Adjusted to ensure the content scales with the grid */
+  height: 100%; /* Adjusted to ensure the content scales with the grid */
+  object-fit: cover;
+  border-radius: 5px;
+  grid-column: span 2; 
+  grid-row: span 2;    
+}
+
+.room-mosaic .tiny {  
+  width: 100%; /* Adjusted to ensure the content scales with the grid */
+  height: 100%; /* Adjusted to ensure the content scales with the grid */
+  object-fit: cover;
+  border-radius: 5px;
+}
