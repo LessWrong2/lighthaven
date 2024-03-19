@@ -29,6 +29,16 @@
     </script>
     <script src="scripts/blogList.js" defer></script>
     <script src="scripts/faqScript.js" defer></script>
+    <script>
+      fetch('qAndA.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('faqContent').innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Error loading the FAQ content:', error);
+        });
+    </script>
   </head>
   <body>
     <div class="navbar">
@@ -44,9 +54,6 @@
     </div>
     <div class="content-area">
       <section class="splash-section background-image">
-        <!-- <div class="background-image"> -->
-        <!-- <img class="splash-image photo-gallery-image" src="./lessonline_cover.png"/> -->
-
           <div class="splash-text">
             <h1>LessOnline</h1>
             <div class="subtitle"><em>A Gathering of the Diaspora of Rationalist Blogs</em></div>
@@ -66,12 +73,9 @@
             <div class="blogs" id="blog-list">
             </div>
           </div>
-
-        <!-- </div> -->
       </section>
 
       <section class="campus-section">
-        <!-- <img class="campus-image" src="./lessonline_cover.png"/> -->
         <img class="campus-image" src="./public/splash_image_campus_map.jpg"/>
         <div class="text-section buildings">
           <h2>31 May - 2 June, 2024</h2>
@@ -90,22 +94,11 @@
           </p>
         </div>
       </section>
-
-      <section class="center-section">
-        <div class="container">
-          <div class="top-left">Top Left</div>
-          <div class="top-right">Top Right</div>
-          <div class="bottom-left">Bottom Left</div>
-          <div class="bottom-right">Bottom Right</div>
-        </div>
-      </section>
-
-
       <section class="FAQ-section">
         <h2 class="title">FAQ</h2>
-        <div class="faq" id="faq-list">
-        </div>
+        <div id="faqContent"></div>
       </section>
+
       <section class="events">
         <div class="event" href="lesswrong-software.html">
           <img class="event-photo photo-gallery-image" src="./public/stuart-park-square.jpg"/>

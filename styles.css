@@ -944,34 +944,3 @@ h4 {
   z-index: 1;
   position: relative;
 }
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Creates two columns */
-  grid-template-rows: 1fr 1fr; /* Creates two rows */
-  height: 200px; /* Adjust as needed */
-  width: 200px; /* Adjust as needed */
-}
-
-.top-left {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  color: purple;
-}
-
-.top-right {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.bottom-left {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-.bottom-right {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-
