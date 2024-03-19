@@ -5,6 +5,7 @@
     <meta property="twitter:image:src" content="https://res.cloudinary.com/lesswrong-2-0/image/upload/h_200/v1695841034/lighthaven_logo_ruab6b.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/tlf2euo.css">
@@ -26,31 +27,8 @@
 
       gtag('config', 'G-NP786MY8K9');
     </script>
-       <script>
-        fetch('blogs.csv')
-          .then(response => response.text())
-          .then(data => {
-            const rows = data.split('\n').slice(1); // Skip header row
-            const attendeesList = document.getElementById('blog-list');
-            rows.forEach(row => {
-              const [name, link, attending] = row.split(',');
-              const attendeeDiv = document.createElement('div');
-              attendeeDiv.classList.add('blog-name');
-              attendeeDiv.classList.add(attending.trim() === 'true' ? 'attending' : 'not');
-              const attendeeLink = document.createElement('a');
-              attendeeLink.href = link.trim();
-              attendeeLink.textContent = name.trim();
-              attendeeDiv.appendChild(attendeeLink);
-              attendeesList.appendChild(attendeeDiv);
-                  // if (row !== rows[rows.length - 1]) {
-              //   const divider = document.createElement('span');
-              //   divider.textContent = '~';
-              //   divider.classList.add('divider');
-              //   attendeeLink.insertAdjacentElement('afterend', divider);
-              // }
-            });
-          });
-      </script>
+    <script src="scripts/blogList.js" defer></script>
+    <script src="scripts/faqScript.js" defer></script>
   </head>
   <body>
     <div class="navbar">
@@ -71,9 +49,8 @@
 
           <div class="splash-text">
             <h1>LessOnline</h1>
-            <p><em>A Gathering of the Diaspora of Rationalist Blogs</em></p>
-            <em>Berkeley, CA, Lighthaven: May 31 - Jun 2</em>
-            <p></p>
+            <div class="subtitle"><em>A Gathering of the Diaspora of Rationalist Blogs</em></div>
+            <div class="info"><em>Berkeley, CA, <a href="https://www.lighthaven.space/">Lighthaven</a>: May 31 - Jun 2</em></div>
             <div class="cta-row">
               <!-- <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
                 Buy tickets
@@ -84,13 +61,50 @@
 
             </div>
             <div class="attendees-key">
-              <label style="color: green;"><input type="checkbox" id="toggleCheckbox"> Show only attending</label>
+              <label><input type="checkbox" id="toggleCheckbox"> Show attendees only</label>
             </div>
             <div class="blogs" id="blog-list">
             </div>
           </div>
 
         <!-- </div> -->
+      </section>
+
+      <section class="campus-section">
+        <!-- <img class="campus-image" src="./lessonline_cover.png"/> -->
+        <img class="campus-image" src="./public/splash_image_campus_map.jpg"/>
+        <div class="text-section buildings">
+          <h2>31 May - 2 June, 2024</h2>
+          <h4><a href="https://www.lighthaven.space/">Lighthaven Campus</a>, Berkeley, CA</h4>
+          <p>
+            <div>
+              LessOnline is an ingathering for the Rationalist blogger diaspora, 
+              an opportunity to meet people you've only ever known by their LessWrong username or 
+              pseudonymous Substack handle.<br/><br/>
+              The goal is to bring together a "mostly-online subculture of people 
+              trying to work together to figure out how to distinguish truth from 
+              falsehood using insights from probability theory, cognitive science, and AI." [1] <br/><br/>
+              The structure will be determined by you: We'll have a collaborative schedule for "unconference" sessions, 
+              where attendees can sign up to run anything they want.<br/><br/>
+            </div>
+          </p>
+        </div>
+      </section>
+
+      <section class="center-section">
+        <div class="container">
+          <div class="top-left">Top Left</div>
+          <div class="top-right">Top Right</div>
+          <div class="bottom-left">Bottom Left</div>
+          <div class="bottom-right">Bottom Right</div>
+        </div>
+      </section>
+
+
+      <section class="FAQ-section">
+        <h2 class="title">FAQ</h2>
+        <div class="faq" id="faq-list">
+        </div>
       </section>
       <section class="events">
         <div class="event" href="lesswrong-software.html">
@@ -117,18 +131,6 @@
             </p>
           </div>
         </div>
-        <!--<div class="event" href="s-process-developer.html">
-          <img class="event-photo photo-gallery-image" src="public/bedroom-1-square.jpg"/>
-          <div>
-            <h3>Lodging</h3>
-            <h4>
-              Up to 80 people
-            </h4>
-            <p>
-              Running a program somewhere else, but need to host additional people? We have 44 bedrooms, with up to 80 beds.
-            </p>
-          </div>
-        </div>-->
         <div class="event">
           <img class="event-photo photo-gallery-image" src="public/crowd-stuart-park-square.jpg"/>
           <div>

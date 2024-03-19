@@ -5,6 +5,7 @@
   --light-grey: #888;
   --greyish: #666666;
   --dark-greyish: rgb(80 80 80 / 80%);
+  --green: #4CAF50;
 }
 
 /* Then you can use it like this */
@@ -40,6 +41,13 @@ a:hover {
 
 p, li {
   font-family: verdigris-mvb-pro-text, serif;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+.subtitle {
+  font-family: verdigris-mvb-pro-text, serif;
   font-size: 36px;
   line-height: 1.4;
   margin-bottom: 2px; /* or 2px? */
@@ -70,6 +78,9 @@ h1 {
   /* color: rgba(50,50,50); */
 }
 
+section {
+  padding-top: 60px;
+}
 .navbar {
   display: flex;
   flex-direction: row;
@@ -255,7 +266,7 @@ h1 {
   margin-bottom:59px;
 }
 
-.banner-section {
+.campus-section {
   display: flex;
 
   row-gap: 12px;
@@ -270,7 +281,7 @@ h1 {
 .text-section {
   width: 60%;
   max-width: 550px;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   flex: 3.5;
   min-width: 300px;
 }
@@ -357,6 +368,30 @@ h4 {
 }
 .center-section h2 {
   text-align: center;
+}
+
+.FAQ-section {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto; */
+
+  width: 420px;
+  left: calc(50% - 360px);
+  position: relative; /* changed from absolute */
+
+}
+
+.splash-text {
+  /* width: 420px; */
+  top: 50px;
+  /* left: calc(50% - 360px); */
+  position: relative; /* changed from absolute */
+  text-align: center;
+  color: white;
+  padding-top: 100px;
 }
 
 .event button {
@@ -824,17 +859,17 @@ h4 {
   position: relative;
   text-align: center;
   z-index: 1; /* Add a higher z-index value to override gradient*/  
+  font-size: 22px; /* Remove the default font-size */
 }
 
 .blogs .attending a {
   display: inline-block;
-  color: green;
+  color: var(--green);
   opacity: 0.8;
   text-shadow: 0 0 3px #00000082;
   text-decoration: none;
   transition: color 0.1s;
   /* padding: 5px; Add padding for better click area */
-  font-size: 18px;
   margin-left: 18px;
 }
 
@@ -846,12 +881,11 @@ h4 {
   text-decoration: none;
   transition: color 0.1s;
   /* padding: 5px; Add padding for better click area */
-  font-size: 18px;
   margin-left: 18px;
 }
 
 .attending {
-  color: green;
+  color: var(--green);
 }
 
 .blogs a:hover {
@@ -868,6 +902,9 @@ h4 {
   z-index: 1;
   padding-bottom: 20;
   position: relative;
+  color: var(--green);
+  font-size: 18px;
+  text-shadow: 0px 0px 3px rgba(0,0,0,1);
 }
 
 .blog-name {
@@ -878,7 +915,63 @@ h4 {
   display: none;
 }
 
+.faq-item {
+  margin-bottom: 20px;
+  display: flex
+}
+
+.q-and-a {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faqIcon {
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  vertical-align: top;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+.down {
+  display: inline-block;
+  color: green;
+  transform: rotate(90deg); /* Rotates the carrot to face down */
+}
+
 #toggleCheckbox {
   z-index: 1;
   position: relative;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two columns */
+  grid-template-rows: 1fr 1fr; /* Creates two rows */
+  height: 200px; /* Adjust as needed */
+  width: 200px; /* Adjust as needed */
+}
+
+.top-left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  color: purple;
+}
+
+.top-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.bottom-left {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.bottom-right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+
