@@ -30,7 +30,7 @@
     <script src="scripts/blogList.js" defer></script>
     <script src="scripts/faqScript.js" defer></script>
     <script>
-      fetch('qAndA.html')
+      fetch('faq.html')
         .then(response => response.text())
         .then(html => {
           document.getElementById('faqContent').innerHTML = html;
@@ -62,10 +62,9 @@
               <!-- <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
                 Buy tickets
               </a> -->
-              <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button third" target="_blank">
+              <a href="https://www.tickettailor.com/events/manifoldmarketsinc/1166167" class="CTA-button third" target="_blank">
                 Buy a Ticket
               </a>
-
             </div>
             <div class="attendees-key">
               <label><input type="checkbox" id="toggleCheckbox"> Show attendees only</label>
@@ -94,49 +93,32 @@
           </p>
         </div>
       </section>
+
       <section class="FAQ-section">
         <h2 class="title">FAQ</h2>
         <div id="faqContent"></div>
       </section>
 
-      <section class="events">
-        <div class="event" href="lesswrong-software.html">
-          <img class="event-photo photo-gallery-image" src="./public/stuart-park-square.jpg"/>
-          <div>
-            <h3>
-              Retreats & Educational Workshops
-            </h3>
-            <h4>15 - 70 people</h4>
-            <p>
-              We offer cozy nooks with firepits, discussion rooms with endless whiteboards, and up to 44 bedrooms (with up to 80 beds).
-            </p>
-          </div>
-        </div>
-        <div class="event" href="s-process-developer.html">
-          <img class="event-photo photo-gallery-image" src="public/presentation-square.jpg"/>
-          <div>
-            <h3>Educational Conferences</h3>
-            <h4>
-              50 - 600 people
-            </h4>
-            <p>
-              Conference space for up to 600 people. 20+ session spaces. 80 conference attendees can book accommodation on the campus.
-            </p>
-          </div>
-        </div>
-        <div class="event">
-          <img class="event-photo photo-gallery-image" src="public/crowd-stuart-park-square.jpg"/>
-          <div>
-            <h3>Event Space</h3>
-            <h4>
-              10 - 500 people
-            </h4>
-            <p>
-              We can host events ranging from educational talks to large 500 person mixers. We can provide sound setup, music, private kitchens, snacks, catering.
-            </p>
-          </div>
+
+      <section class="campus-section">
+        <img class="campus-image" src="./public/manifold.png"/>
+        <div class="text-section buildings">
+          <h2>LessOnline x <a href="https://www.manifest.is/">Manifest</a></h2>
+            <div>
+              <p>LessOnline and Manifest are both happening at Lighthaven 1 week apart.</p>
+              <p>So we're teaming up with Manifest to offer a discounted ticket to both events.</p>
+              <p>And also you can spend time at Lighthaven in the middle of the week where attendees will be putting on their own events.</p>
+              <p>There'll be further paid events like a Rationality Techniques Workshop with Duncan Sabien and Trading School with Ricki Heicklen.</p>
+              <p>Go to the Manifest website to learn more, and when you buy the LessOnline ticket you can also buy the Manifest ticket too at a discount!</p>
+              <br/>
+            </div>
+          <a href="https://www.tickettailor.com/events/manifoldmarketsinc/1166167" class="CTA-button third" target="_blank">
+            Buy tickets now
+          </a>
         </div>
       </section>
+
+
       <section class="center-section">
         <h2 class="title">What is Lighthaven?</h2>
         <div>
@@ -149,278 +131,6 @@
           </p>
           <p>
             Lighthaven is a project by Lightcone Infrastructure, which is dedicated to facilitating intellectual progress on humanity's most important questions.
-          </p>
-        </div>
-      </section>
-      <section class="center-section">
-        <h2 class="title">Pricing</h2>
-        <div>
-          <p>We determine pricing on a case-by-case basis, but a good approximation is:</p>
-          <p>
-            <b>Retreats, Conferences and Lodging:</b><br/>
-            $100 - $250 per person per day.
-          </p>
-          <p>
-            <b>Events:</b><br/>
-            $25 - $75 per person.
-          </p>
-          <p>
-            We offer some groups large discounts (including free) if we think a project seems particularly great to us. Please feel quite free to ask us about this.
-          </p>
-          <p>
-            You can use your own caterer, but our default caterer offers meals from $20/meal to $50/meal that most visitors have found quite satisfying.
-          </p>
-          <p>
-            We do engage in some price discrimination. If we think your best alternative to our venue would be much more expensive, we may charge more than our listed price. We try to find a fair price that splits the difference between our own costs and the value you get out of the space.
-          </p>
-          <p>
-            We also provide more bespoke services (see below), though we generally charge more for this.
-          </p>
-          <p>
-            Overall we try to be reasonable about pricing, and don't expect to make much profit on the space.
-          </p>
-        </div>
-      </section>
-      <section class="center-section">
-        <h2 class="title">What are people saying?</h2>
-        </section>
-      <section class="testimonials">
-        <div class="testimonial">
-          <p>
-            Lighthaven felt rambly and wondrous and fun without being pretentious?  Felt like an incredibly-well-executed, 11-of-10 house party venue (laudatory) crossed with Disneyland.
-          </p>
-          <p>
-            I am still learning about cool things and spaces in the venue that I missed (there was a robot sand table?)
-          </p>
-          <p class="testimonial-author">
-            – Manifest attendee in the Manifest feedback form
-          </p>
-        </div>
-        <div class="testimonial">
-          <p>
-            The venue itself is fucking gorgeous. 
-          </p><p>
-            I heard something like that ~2/3 of the time as I was walking guests of honor in & giving them a tour. Something like "wow, how did you find this place?" or "damn, you guys got a good spot."
-          </p>
-          <p class="testimonial-author">
-            – Saul Munn, lead organizer of Manifest
-          </p>
-        </div>
-        <div class="testimonial">
-          <p>
-            We had an incredible time at the Lighthaven last week - many of the participants remarked how beautiful and cozy the campus is, and the atmosphere was extremely conducive for creative thinking and problem solving. All the little details from having lots of post-it pads and markers to mini fridges and fluffy slippers show how much thought was put into designing the space. [...]</p>
-            <p>We hope to be back at the Lighthaven again at our next event, if there are vacancies!
-          </p>
-          <p class="testimonial-author">
-            – Shao Wei, organizer of <em>Finding the Right Abstractions</em><br/> workshop run by the Topos Institute
-          </p>
-        </div>
-        <div class="testimonial">
-          <p>
-            Man, I really like the aesthetics. Other people seemed to also. 'Well appointed' is the phrase that keeps coming to mind for me. Lots of things I needed were nearby when I needed them. Having supplies in multiple areas is a good call and I think your supply list is pretty good.
-          </p>
-          <p>
-            The layout was also good for movement, good for thought. The math and science decorations were great. Vibe: it felt like you were happy to have us there and happy to help. That’s a nice and unusual thing!
-          </p>
-          <p class="testimonial-author">
-            – Caitlin Elizondo, Head of People Operations<br/> at the Centre for Effective Altruism
-          </p>
-        </div>
-        <div class="testimonial">
-          <p>
-            The venue was really great, things went really smoothly, and I’m excited to use the space again in the future for similar events.
-          </p>
-          <p class="testimonial-author">
-            – Alex Vermeer, MIRI COO
-          </p>
-        </div>
-      </section>
-      <section class="center-section">
-        <h2 class="title">Campus Spaces</h2>
-      </section>
-      <section class="banner-section">
-        <img class="campus-image" src="./lessonline_cover.png"/>
-        <div class="text-section buildings">
-          <p>
-            <div>
-              <b>Aumann Hall</b><br/>
-              Upstairs has a common space and 7 bedrooms.<br/>
-              Downstairs is great for parties and weekend conferences<br/>
-              (though not available during weekday business hours).
-            </div>
-          </p>
-          <p>
-            <div>
-              <b>Bayes House</b><br/>
-              Can sleep 30 people, and host sessions of up to 60 people.<br/>
-              Includes the surrounding gardens (200+ capacity).
-            </div>
-          </p>
-          <p>
-            <div>
-              <b>The Cottage</b><br/>
-              Storage and laundry. You can store things here during events.
-            </div>
-          </p>
-          <p>
-            <div>
-              <b>The Den</b><br/>
-              Front of building has 7 offices/event-spaces.<br/>
-              Back of building has 4 of our nicest and most secluded bedrooms.
-            </div>
-          </p>
-          <p>
-            <div>
-              <b>Eigenspace</b><br/>
-              4 small session spaces, a gym, and a 60 person session space.
-            </div>
-          </p>
-          <p>
-            <div>
-              <b>Feynman House</b><br/>
-              Surrounded by beautiful gardens and a nice outdoor bar.
-            </div>
-          </p>
-          <p>
-            <div>
-              <b>The Guesthouse</b><br/>
-              An additional house a block away, with 9 additional bedrooms.
-            </div>
-          </p>
-        </div>
-      </section>
-      <section class="center-section">
-        <div class="title">
-          <h2>Services We Provide</h2>
-        </div>
-        <div>
-          <p>
-            For an additional charge we can provide (among many other things):
-          </p>
-          <ul>
-            <li>Catering services, snacks & drinks</li>
-            <li>General ops-support for your event</li>
-            <li>Event branding and marketing</li>
-          </ul>
-          <p>
-            We have a lot of experience running all kinds of different events, from small 15-20 person dinners to 1000+ person conferences, to 2-month fellowships and research programs.
-          </p>
-          <p>
-            We can’t guarantee we can provide everything you need, but if you are facing some kind of problem or obstacle in the course of preparing or running your event, we can probably help you.
-          </p>
-        </div>
-      </section>
-      <section class="center-section title">
-        <h2>Aumann Hall</h2>
-      </section>
-      <section>
-        <div class="photo-mosaic photo-gallery">
-          <img class="photo-gallery-image large" src="public/8x5/atrium.jpg" />
-          <img class="photo-gallery-image small" src="public/8x5/75-print-Rose_Garden_Inn-45.jpg"/>
-          <img class="photo-gallery-image small" src="public/8x5/80-print-Rose_Garden_Inn-50.jpg"/>
-          <img class="photo-gallery-image small" src="public/8x5/54-print-Rose_Garden_Inn-24.jpg"/>
-          <img class="photo-gallery-image small" src="public/8x5/67-print-Rose_Garden_Inn-37.jpg"/>
-          <img class="photo-gallery-image small" src="public/69-web-or-mls-Rose_Garden_Inn-39.jpg"/>
-          <img class="photo-gallery-image small" src="public/83-web-or-mls-Rose_Garden_Inn-53.jpg"/>
-          <img class="photo-gallery-image large" src="public/atrium-logo-floor.jpeg"/>
-          <img class="photo-gallery-image small" src="public/bathroom-A-probably.jpeg"/>
-          <img class="photo-gallery-image small" src="public/bathroom-A-ground.jpeg"/>
-        </div>
-      </section>
-      <section class="center-section title">
-        <h2>Bayes House</h2>
-      </section>
-      <section>
-        <div class="photo-mosaic photo-gallery">
-          <img class="photo-gallery-image large" src="public/bayes-house.jpg"/>
-          <img class="photo-gallery-image small" src="public/bayes-house-lobby.jpg"/>
-          <img class="photo-gallery-image small" src="public/8x5/116-print-Rose_Garden_Inn-86.jpg"/>
-          <img class="photo-gallery-image small" src="public/8x5/103-print-Rose_Garden_Inn-73.jpg"/>
-          <img class="photo-gallery-image small" src="public/8x5/109-print-Rose_Garden_Inn-79.jpg"/>
-          <img class="photo-gallery-image small" src="public/8x5/38-print-Rose_Garden_Inn-8.jpg"/>
-          <img class="photo-gallery-image large" src="public/6x4/DSC8488.jpg"/>
-          <img class="photo-gallery-image small" src="public/sunroom.jpeg"/>
-          <img class="photo-gallery-image small" src="public/shed-house.jpeg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC8026.jpg"/>
-          <img class="small photo-gallery-image" src="public/8x5/133-print-Rose_Garden_Inn-103.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC7880.jpg"/>
-          <img class="large photo-gallery-image" src="public/6x4/DSC8001.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC8446.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC8523.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC8280-Edit.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC8320.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC8471.jpg"/>
-          <img class="photo-gallery-image small" src="public/attic-B.jpeg"/>
-        </div>
-      </section>
-      <section class="center-section title">
-        <h2>The Den</h2>
-      </section>
-      <section>
-        <div class="photo-mosaic photo-gallery">
-          <img class="photo-gallery-image large" src="public/8x5/40-print-Rose_Garden_Inn-10.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/call-room-1.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/Back-1D-Right-1.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/Front-1D-Left.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/Front-2D-Right-LW-Office.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/Front-2D-Right-LW.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/Back-2D-Right-bathroom.jpg"/>
-          <img class="photo-gallery-image large" src="public/Building-D/Front-1D-Right.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/Front-D-right.jpg"/>
-          <img class="photo-gallery-image small" src="public/Building-D/Back-2D-Left-2.jpg"/>
-        </div>
-      </section>
-      <section class="center-section title">
-        <h2>Eigenspace</h2>
-      </section>
-      <section>
-        <div class="photo-mosaic photo-gallery">
-          <img class="photo-gallery-image large" src="public/extension-house.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC6834.jpg"/>
-          <img class="small photo-gallery-image" src="public/6x4/DSC6859.jpg"/>
-          <img class="large photo-gallery-image" src="public/6x4/DSC6958.jpg"/>
-          <img class="small photo-gallery-image" src="public/8x5/44-print-Rose_Garden_Inn-14.jpg"/>
-          <img class="small photo-gallery-image" src="public/Building-E/Building-E-side-room.jpg"/>
-        </div>
-      </section>
-      <section class="center-section title">
-        <h2>Gardens</h2>
-      </section>
-      <section>
-        <div class="photo-mosaic photo-gallery">
-          <img class="photo-gallery-image large" src="public/WardGardens/Ward-Gardens-Bar.jpg"/>
-          <img class="photo-gallery-image small" src="public/WardGardens/Ward-Gardens-Cabin-1-2.jpg"/>
-          <img class="photo-gallery-image small" src="public/WardGardens/Ward-Gardens-Cabin-4b.jpg"/>
-          <img class="photo-gallery-image small" src="public/WardGardens/Ward-Gardens-Cabin-3.jpg"/>
-          <img class="photo-gallery-image small" src="public/WardGardens/Ward-Gardens-Chapel.jpg"/>
-          <img class="photo-gallery-image small" src="public/WardGardens/Ward-Gardens-Cabin-4.jpg"/>
-
-          <img class="photo-gallery-image large" src="public/WardGardens/IMG_1238.jpg"/>
-
-          <img class="photo-gallery-image small" src="public/WardGardens/onion-ring-night.jpeg"/>
-          <img class="photo-gallery-image small" src="public/WardGardens/Ward-Gardens-tree.jpg"/>
-          <img class="photo-gallery-image small" src="public/WardGardens/Ward-Gardens-Back-left.jpg"/>
-        </div>
-      </section>
-      <div id="gallery-modal" class="modal">
-        <span class="close">&times;</span>
-        <div class="modal-content">
-          <div id="prev-button" class="carousel-button">&#10094;</div>
-          <div class="modal-image-container">
-            <img id="modal-image" class="modal-photo" src="" alt="" />
-          </div>
-          <div id="next-button" class="carousel-button">&#10095;</div>
-        </div>
-      </div>
-      <section class="center-section">
-        <h2 class="title">About Lightcone</h2>
-        <div>
-          <p>Lighthaven is a project by <a href="http://www.lightconeinfrastructure.com">Lightcone Infrastructure</a>.</p>
-          <p>We build tools and services we think will help humanity flourish into the long term future. We also run <a href="https://lesswrong.com">LessWrong.com</a> and the <a href="https://alignmentforum.org">Alignment Forum</a>.</p>
-          <p>
-            <img class="end-logo"
-            src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
-          />
           </p>
         </div>
       </section>
