@@ -264,11 +264,12 @@ section {
   font-size: 50px;
 }
 
-/* .campus-image {
-  width: 50%;
-  margin-right: 50px;
+.condensed-image {
+  width: 40%;
   margin-top: 0px;
-} */
+}
+
+
 
 .cta-row {
   z-index: 2;
