@@ -262,6 +262,7 @@ section {
 }
 
 .cta-row {
+  z-index: 2;
   margin: 40px;
   margin-bottom:59px;
 }
@@ -278,6 +279,39 @@ section {
   /* justify-items: center; */
   justify-content: center;
 }
+
+.blogroll-section {
+  display: flex;
+  flex-direction: row;
+  /* row-gap: 12px; */
+  /* column-gap: 50px; */
+  /* flex-flow: row wrap; */
+  /* align-items: flex-end; */
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+  /* justify-items: center; */
+  justify-content: center;
+  min-height: 600px;
+}
+
+.ben-testimonial {
+  width: 30%;
+  text-align: center;
+  margin-right: 50px;
+  margin-top:0;
+  margin-bottom:auto;
+}
+
+.blogosphere {
+  width: 80%;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 50px; */
+  flex: 3.5;
+  min-width: 300px;
+}
+
 .text-section {
   width: 60%;
   max-width: 550px;
@@ -392,6 +426,7 @@ h4 {
   text-align: center;
   color: white;
   padding-top: 100px;
+  padding-bottom: 200px;
 }
 
 .event button {
@@ -638,6 +673,10 @@ h4 {
   .campus-image {
     width: calc(100% - 30px);
   }
+
+  .ben-testimonial {
+    width: calc(100% - 30px);
+  }
 }
 
 .end-logo {
@@ -804,7 +843,7 @@ h4 {
 
 .white {
   color: white;
-  text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
 }
 
 .rooms {
@@ -866,7 +905,7 @@ h4 {
   display: inline-block;
   color: var(--green);
   opacity: 0.8;
-  text-shadow: 0 0 3px #00000082;
+  text-shadow: 0 0 0px #00000082;
   text-decoration: none;
   transition: color 0.1s;
   /* padding: 5px; Add padding for better click area */
@@ -875,9 +914,9 @@ h4 {
 
 .blogs .not a {
   display: inline-block;
-  color: white;
+  color: var(--light-greyish);
   opacity: 0.8;
-  text-shadow: 0 0 3px #00000082;
+  text-shadow: 0 0 0px #00000082;
   text-decoration: none;
   transition: color 0.1s;
   /* padding: 5px; Add padding for better click area */
@@ -889,7 +928,7 @@ h4 {
 }
 
 .blogs a:hover {
-  color: white;
+  color: var(--light-goldish);
   opacity: 1;
 }
 
@@ -900,11 +939,12 @@ h4 {
 
 .attendees-key {
   z-index: 1;
+  text-align: center;
   padding-bottom: 20;
   position: relative;
   color: var(--green);
-  font-size: 18px;
-  text-shadow: 0px 0px 3px rgba(0,0,0,1);
+  font-size: 22px;
+  text-shadow: 0px 0px 0px rgba(0,0,0,1);
 }
 
 .blog-name {
@@ -940,11 +980,13 @@ h4 {
 
 .down {
   display: inline-block;
-  color: green;
+  color: var(--green);
   transform: rotate(90deg); /* Rotates the carrot to face down */
 }
 
 #toggleCheckbox {
   z-index: 1;
   position: relative;
+  transform: scale(1.5); /* Adjust the scale value as needed */
+  margin-right: 10px; /* Adjust the margin as needed */
 }
