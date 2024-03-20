@@ -294,6 +294,8 @@ section {
   /* justify-items: center; */
   justify-content: center;
   min-height: 600px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .blogroll-title {
@@ -304,9 +306,9 @@ section {
 
 .ben-testimonial {
   width: 30%;
-  text-align: center;
-  margin-right: 50px;
-  margin-top:0;
+  text-align: left;
+  margin-right: 100px;
+  margin-top:50px;
   margin-bottom:auto;
 }
 
@@ -922,7 +924,7 @@ h4 {
 
 .blogs .not a {
   display: inline-block;
-  color: var(--light-greyish);
+  color: var(--lightest-greyish);
   opacity: 0.8;
   text-shadow: 0 0 0px #00000082;
   text-decoration: none;
@@ -1001,4 +1003,8 @@ h4 {
 
 .blog-checkbox:hover {
   color: var(--light-green);
+}
+
+.info {
+  font-size: 20px;
 }
