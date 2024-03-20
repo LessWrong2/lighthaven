@@ -64,6 +64,10 @@ aside {
   font-size: 16px;
 }
 
+.event-description a {
+  color: var(--light-goldish)
+}
+
 p a {
   color: var(--light-goldish)
 }
@@ -169,6 +173,10 @@ section {
   margin-right: 10px;
   font-size: 24px;
   padding: 12px 18px;
+  opacity: 100%;
+}
+.CTA-button.third:hover {
+  background: var(--light-goldish);
 }
 
 .top-image {
@@ -256,12 +264,11 @@ section {
   font-size: 50px;
 }
 
-.campus-image {
-  width: 40%;
+/* .campus-image {
+  width: 50%;
   margin-right: 50px;
-  margin-top:auto;
-  margin-bottom:auto;
-}
+  margin-top: 0px;
+} */
 
 .cta-row {
   z-index: 2;
@@ -279,14 +286,14 @@ section {
   flex-wrap: wrap;
   /* align-content: center; */
   /* justify-items: center; */
-  justify-content: center;
+  justify-content: space-evenly
 }
 
 .blogroll-section {
   display: flex;
   flex-direction: row;
   /* row-gap: 12px; */
-  /* column-gap: 50px; */
+  column-gap: 80px;
   /* flex-flow: row wrap; */
   /* align-items: flex-end; */
   /* flex-wrap: wrap; */
@@ -300,15 +307,17 @@ section {
 
 .blogroll-title {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 46px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 26px;
 }
 
 .ben-testimonial {
   width: 30%;
   text-align: left;
   margin-right: 100px;
-  margin-top:50px;
+  margin-top:10px;
   margin-bottom:auto;
 }
 
@@ -329,6 +338,15 @@ section {
   flex: 3.5;
   min-width: 300px;
 }
+
+.event-description {
+  width: 60%;
+  max-width: 550px;
+  /* padding-top: 50px; */
+  flex: 3.5;
+  min-width: 300px;
+}
+
 
 @media (max-width: 650px) {
   .CTA-button-navbar {
@@ -415,17 +433,44 @@ h4 {
 }
 
 .FAQ-section {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto; */
+  /* row-gap: 12px; */
+  column-gap: 90px;
+  align-items: flex-start;
+  padding: 100px;
 
-  width: 720px;
+  /* justify-content: space-evenly */
+
+  /* width: 720px;
   left: calc(50% - 460px);
-  position: relative; /* changed from absolute */
+  position: relative; changed from absolute */
 
+}
+
+.campus-section {
+  display: flex;
+
+  row-gap: 12px;
+  column-gap: 50px;
+  /* flex-flow: row wrap; */
+  align-items: flex-end;
+  flex-wrap: wrap;
+  /* align-content: center; */
+  /* justify-items: center; */
+  justify-content: space-evenly
+}
+
+.faq-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 800px;
+  margin-top: 0;
 }
 
 .splash-text {
@@ -679,10 +724,10 @@ h4 {
   .event p {
     font-size: 16px;
   }
-
+/* 
   .campus-image {
     width: calc(100% - 30px);
-  }
+  } */
 
   .ben-testimonial {
     width: calc(100% - 30px);
@@ -908,7 +953,7 @@ h4 {
   position: relative;
   text-align: center;
   z-index: 1; /* Add a higher z-index value to override gradient*/  
-  font-size: 22px; /* Remove the default font-size */
+  font-size: 19px; /* Remove the default font-size */
 }
 
 .blogs .attending a {
@@ -924,7 +969,7 @@ h4 {
 
 .blogs .not a {
   display: inline-block;
-  color: var(--light-greyish);
+  color: var(--lightest-greyish);
   opacity: 0.8;
   text-shadow: 0 0 0px #00000082;
   text-decoration: none;
@@ -953,7 +998,7 @@ h4 {
   padding-bottom: 20;
   position: relative;
   color: var(--green);
-  font-size: 22px;
+  font-size: 20px;
   text-shadow: 0px 0px 0px rgba(0,0,0,1);
 }
 
@@ -1007,4 +1052,86 @@ h4 {
 
 .info {
   font-size: 20px;
+}
+
+.info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.info-icon .info-popup {
+  visibility: hidden;
+  background-color: var(--light-grey);
+  color: #fff;
+  text-align: left;
+  border-radius: 10px;
+  padding: 12px 12px;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 125%;
+  left: 50%; */
+  margin-left: 400px;
+  margin-top: -50px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+/* .info-icon .info-popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+} */
+
+.info-icon:hover .info-popup {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+.blogroll-title-info {
+  display: flex;
+  justify-content: center;
+}
+
+.footnote {
+  position: relative;
+  cursor: help;
+  color: var(--light-goldish);
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 150px;
+  /* background-color: black; */
+  color: var(--lightest-greyish);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 100%;
+  margin-top: -10px;
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.footnote:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.campus-map {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
