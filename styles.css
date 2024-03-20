@@ -924,7 +924,7 @@ h4 {
 
 .blogs .not a {
   display: inline-block;
-  color: var(--lightest-greyish);
+  color: var(--light-greyish);
   opacity: 0.8;
   text-shadow: 0 0 0px #00000082;
   text-decoration: none;
