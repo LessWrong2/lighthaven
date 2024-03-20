@@ -6,6 +6,8 @@
   --greyish: #666666;
   --dark-greyish: rgb(80 80 80 / 80%);
   --green: #4CAF50;
+  --dark-green: #2E7D32;
+  --light-green: #81C784;
 }
 
 /* Then you can use it like this */
@@ -292,6 +294,12 @@ section {
   /* justify-items: center; */
   justify-content: center;
   min-height: 600px;
+}
+
+.blogroll-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 46px;
 }
 
 .ben-testimonial {
@@ -989,4 +997,8 @@ h4 {
   position: relative;
   transform: scale(1.5); /* Adjust the scale value as needed */
   margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.blog-checkbox:hover {
+  color: var(--light-green);
 }

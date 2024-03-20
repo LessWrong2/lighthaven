@@ -114,8 +114,9 @@
           I am Ben and I endorse the message below
         </div>
         <div class="blogosphere">
+          <h3 class="blogroll-title">Blogroll</h3>
           <div class="attendees-key">
-            <label><input type="checkbox" id="toggleCheckbox"> Show attendees only</label>
+            <label class="blog-checkbox"><input type="checkbox" id="toggleCheckbox"> Show attendees only</label>
           </div>
           <div class="blogs" id="blog-list">
           </div>
@@ -193,19 +194,26 @@
       var checkbox = document.getElementById('toggleCheckbox');
       var content = document.getElementsByClassName('not');
 
+      // checkbox.addEventListener('change', function () {
+      //   console.log('changed');
+      //   console.log(content);
+      //     if (this.checked) {
+      //       Array.from(content).forEach(div => {
+      //           div.style.display = 'none';
+      //       });
+      //     } else {
+      //       Array.from(content).forEach(div => {
+      //         div.style.display = 'inline-block';
+      //       });          
+      //     }
+      // });
+
       checkbox.addEventListener('change', function () {
-        console.log('changed');
-        console.log(content);
-          if (this.checked) {
-            Array.from(content).forEach(div => {
-                div.style.display = 'none';
-            });
-          } else {
-            Array.from(content).forEach(div => {
-              div.style.display = 'inline-block';
-            });          
-          }
+        Array.from(content).forEach(div => {
+          div.classList.toggle('hidden');
+        });
       });
+
     </script>
   </body>
 </html>
