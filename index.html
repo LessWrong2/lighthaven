@@ -45,6 +45,7 @@
             console.log(faqItems);
           
             faqItems.forEach(item => {
+              const faqItem = item.querySelector('.faq-item');
               const faqIconDiv = item.querySelector('.faqIcon');
               const faqIcon = item.querySelector('.fas');
               const question = item.querySelector('.question');
@@ -133,11 +134,10 @@
         <div id="faqContent"></div>
       </section>
 
-
       <section class="campus-section">
         <img class="campus-image" src="./public/manifold.png"/>
         <div class="text-section buildings">
-          <h2>LessOnline x <a href="https://www.manifest.is/">Manifest</a></h2>
+          <h2><a href="https://www.manifest.is/">Manifest</a></h2>
             <div>
               <p>LessOnline and Manifest are both happening at Lighthaven 1 week apart.</p>
               <p>So we're teaming up with Manifest to offer a discounted ticket to both events.</p>

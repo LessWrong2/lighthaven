@@ -917,7 +917,8 @@ h4 {
 
 .faq-item {
   margin-bottom: 20px;
-  display: flex
+  display: flex;
+  cursor: pointer;
 }
 
 .q-and-a {
@@ -930,7 +931,6 @@ h4 {
   font-size: 20px;
   transition: all 0.2s ease-in-out;
   vertical-align: top;
-  cursor: pointer;
   transform-origin: center;
 }
 
