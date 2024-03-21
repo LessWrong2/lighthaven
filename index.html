@@ -1,83 +1,88 @@
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1086441174245593118/1219835448545906738/image.png?ex=660cbf4a&is=65fa4a4a&hm=6ec6ca481d73b15d7a4fbf9bb5cf303156daa3452cb4055ef55f1ee0f5bf53ee&">
-    <meta property="twitter:image:src" content="https://cdn.discordapp.com/attachments/1086441174245593118/1219835448545906738/image.png?ex=660cbf4a&is=65fa4a4a&hm=6ec6ca481d73b15d7a4fbf9bb5cf303156daa3452cb4055ef55f1ee0f5bf53ee&">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="manifest.css">
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="manifest-style.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://use.typekit.net/tlf2euo.css">
-    <link rel="shortcut icon" type="image/jpg" href="https://cdn.discordapp.com/attachments/1086441174245593118/1219835448545906738/image.png?ex=660cbf4a&is=65fa4a4a&hm=6ec6ca481d73b15d7a4fbf9bb5cf303156daa3452cb4055ef55f1ee0f5bf53ee&"/>
-    <title>LessOnline</title>
-    <script>
-      var APP_ID = "wtb8z7sj";
-      window.intercomSettings = {
-        app_id: APP_ID
-      };
-    </script>
-    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
-    <script defer src="modal.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NP786MY8K9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-NP786MY8K9');
-    </script>
-    <script src="scripts/blogList.js" defer></script>
-    <script>
-      fetch('faq.html')
-        .then(response => response.text())
-        .then(html => {
-          document.getElementById('faqContent').innerHTML = html;
-          attachEventListenersToFaqItems();
-        })
-        .catch(error => {
-          console.error('Error loading the FAQ content:', error);
-        });
-        function attachEventListenersToFaqItems() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            console.log(faqItems);
-          
-            faqItems.forEach(item => {
-              const faqItem = item.querySelector('.faq-item');
-              const faqIconDiv = item.querySelector('.faqIcon');
-              const faqIcon = item.querySelector('.fas');
-              const question = item.querySelector('.question');
-              const answer = item.querySelector('.answer');
-              console.log(answer.textContent)
-          
-              faqIconDiv.addEventListener('click', () => {
-                answer.classList.toggle('hidden');
-                faqIcon.classList.toggle('down');
-              });
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image"
+    content="https://cdn.discordapp.com/attachments/1086441174245593118/1219835448545906738/image.png?ex=660cbf4a&is=65fa4a4a&hm=6ec6ca481d73b15d7a4fbf9bb5cf303156daa3452cb4055ef55f1ee0f5bf53ee&">
+  <meta property="twitter:image:src"
+    content="https://cdn.discordapp.com/attachments/1086441174245593118/1219835448545906738/image.png?ex=660cbf4a&is=65fa4a4a&hm=6ec6ca481d73b15d7a4fbf9bb5cf303156daa3452cb4055ef55f1ee0f5bf53ee&">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="manifest.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="manifest-style.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/tlf2euo.css">
+  <link rel="shortcut icon" type="image/jpg"
+    href="https://cdn.discordapp.com/attachments/1086441174245593118/1219835448545906738/image.png?ex=660cbf4a&is=65fa4a4a&hm=6ec6ca481d73b15d7a4fbf9bb5cf303156daa3452cb4055ef55f1ee0f5bf53ee&" />
+  <title>LessOnline</title>
+  <script>
+    var APP_ID = "wtb8z7sj";
+    window.intercomSettings = {
+      app_id: APP_ID
+    };
+  </script>
+  <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/' + APP_ID; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();</script>
+  <script defer src="modal.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NP786MY8K9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-              question.addEventListener('click', () => {
-                answer.classList.toggle('hidden');
-                faqIcon.classList.toggle('down');
-              });
-            });
-        }
-    </script>
-    <script>
-      fetch('timeline.html')
-        .then(response => response.text())
-        .then(html => {
-          document.getElementById('timeline-section').innerHTML = html;
-        })
-        .catch(error => {
-          console.error('Error loading the FAQ content:', error);
+    gtag('config', 'G-NP786MY8K9');
+  </script>
+  <script src="scripts/blogList.js" defer></script>
+  <script>
+    fetch('faq.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('faqContent').innerHTML = html;
+        attachEventListenersToFaqItems();
+      })
+      .catch(error => {
+        console.error('Error loading the FAQ content:', error);
+      });
+    function attachEventListenersToFaqItems() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      console.log(faqItems);
+
+      faqItems.forEach(item => {
+        const faqItem = item.querySelector('.faq-item');
+        const faqIconDiv = item.querySelector('.faqIcon');
+        const faqIcon = item.querySelector('.fas');
+        const question = item.querySelector('.question');
+        const answer = item.querySelector('.answer');
+        console.log(answer.textContent)
+
+        faqIconDiv.addEventListener('click', () => {
+          answer.classList.toggle('hidden');
+          faqIcon.classList.toggle('down');
         });
-    </script>
-  </head>
-  <body>
-    <div class="navbar">
-      <!-- <a href="index.html" class="logo">
+
+        question.addEventListener('click', () => {
+          answer.classList.toggle('hidden');
+          faqIcon.classList.toggle('down');
+        });
+      });
+    }
+  </script>
+  <script>
+    fetch('timeline.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('timeline-section').innerHTML = html;
+      })
+      .catch(error => {
+        console.error('Error loading the FAQ content:', error);
+      });
+  </script>
+</head>
+
+<body>
+  <div class="navbar">
+    <!-- <a href="index.html" class="logo">
         <img class="logo-image"
           src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
         />
@@ -86,116 +91,122 @@
       <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button-navbar" target="_blank">
         Submit an inquiry
       </a> -->
-    </div>
-    <div class="content-area">
-      <section class="splash-section background-image">
-          <div class="splash-text">
-            <h1>LessOnline</h1>
-            <div class="subtitle"><em>An In-Person Gathering of the Rationalist Diaspora</em></div>
-            <div class="info"><em><a href="https://www.lighthaven.space/">Berkeley, CA, Lighthaven</a>: May 31 - Jun 2</em></div>
-            <div class="cta-row">
-              <!-- <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
+  </div>
+  <div class="content-area">
+    <section class="splash-section background-image">
+      <div class="splash-text">
+        <h1>LessOnline</h1>
+        <div class="subtitle"><em>An In-Person Gathering of the Rationalist Diaspora</em></div>
+        <div class="info"><em><a href="https://www.lighthaven.space/">Berkeley, CA, Lighthaven</a>: May 31 - Jun 2</em>
+        </div>
+        <div class="cta-row">
+          <!-- <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
                 Buy tickets
               </a> -->
-              <a href="https://www.tickettailor.com/events/lightconeinfrastructure/1192821#" class="CTA-button third" target="_blank">
-                Buy a Ticket
-              </a>
-            </div>
-            <!-- <div class="attendees-key">
+          <a href="https://www.tickettailor.com/events/lightconeinfrastructure/1192821#" class="CTA-button third"
+            target="_blank">
+            Buy a Ticket
+          </a>
+        </div>
+        <!-- <div class="attendees-key">
               <label><input type="checkbox" id="toggleCheckbox"> Show attendees only</label>
             </div> -->
-            <!-- <div class="blogs" id="blog-list">
+        <!-- <div class="blogs" id="blog-list">
             </div> -->
-          </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="blogroll-section">
-        <div class="event-description">
-          <div style="color: black; font-size: 36px">What is LessOnline?</div>
-          <h2>31 May - 2 June, 2024</h2>
-          <h4><a href="https://www.lighthaven.space/">Lighthaven Campus, Berkeley, CA</a></h4>
-          <p>
-            <div>
-              LessOnline is an in-person conference for the cluster of writers closely associated with the rationalist community, 
-              an opportunity to meet people you've only ever known by their LessWrong username or 
-              pseudonymous Substack handle.<br/><br/>
-              The goal is to bring together a "mostly-online subculture of people 
-              trying to work together to figure out how to distinguish truth from 
-              falsehood using insights from probability theory, cognitive science, and AI." 
-              <span class="footnote"><a href="https://www.astralcodexten.com/about#§where-did-all-this-come-from" target="_blank">[1]</a>
-                <span class="tooltip">
-                  Astral Codex Ten
-                </span>
-              </span>
-              <br/><br/>
-              The structure will be determined by you: We'll have a collaborative schedule for "unconference" sessions, 
-              where attendees can sign up to run anything they want. In addition, writers highlighted in green will be contributing sessions at some point over the weekend.<br/><br/>
+    <section class="blogroll-section">
+      <div class="event-description">
+        <div style="color: black; font-size: 36px">What is LessOnline?</div>
+        <h2>31 May - 2 June, 2024</h2>
+        <h4><a href="https://www.lighthaven.space/">Lighthaven Campus, Berkeley, CA</a></h4>
+        <p>
+        <div>
+          LessOnline is an in-person conference for the cluster of writers closely associated with the rationalist
+          community,
+          an opportunity to meet people you've only ever known by their LessWrong username or
+          pseudonymous Substack handle.<br /><br />
+          The goal is to bring together a "mostly-online subculture of people
+          trying to work together to figure out how to distinguish truth from
+          falsehood using insights from probability theory, cognitive science, and AI."
+          <span class="footnote"><a href="https://www.astralcodexten.com/about#§where-did-all-this-come-from"
+              target="_blank">[1]</a>
+            <span class="tooltip">
+              Astral Codex Ten
+            </span>
+          </span>
+          <br /><br />
+          The structure will be determined by you: We'll have a collaborative schedule for "unconference" sessions,
+          where attendees can sign up to run anything they want. In addition, writers highlighted in green will be
+          contributing sessions at some point over the weekend.<br /><br />
+        </div>
+        </p>
+      </div>
+
+
+      <div class="blogosphere">
+        <div class="blogroll-title-info">
+          <h3 class="blogroll-title">Some writings we love</h3>
+          <div class="info-icon">
+            <i class="fas fa-info-circle"></i>
+            <div class="info-popup">
+              <p><em>A note from Ben Pace</em></p>
+              <p>
+                I don't claim that every blogger invited actively identifies
+                with the rationalist flag, but I confidently claim that
+                there is a natural clustering of blogs here that
+                distinguishes them from the 99%+ of other blogs in the
+                world that don't fit into this clustering, and I know of no
+                other name where everyone else also knows what it
+                refers to.<br><br>
+                You can also consider it the list of blogs that semi-
+                regularly links to and has maybe written at least one
+                critical response to SlateStarCodex/AstralCodexTen,
+                which I think helps define the cluster, but I don't think
+                the cluster is about SSC/ACX.<br><br>
+                I think there's a common thread to a lot of the writers
+                invited:<br>
+              </p>
+              <ul>
+                <li>A belief in the ability to break the world down into
+                  parts and understand how it works.</li>
+                <li>A more specific belief in the ability to do this to our
+                  own minds and decision-making algorithms (as well
+                  as the ability to improve them).</li>
+                <li>A belief that successfully explaining how the world
+                  works is a powerful step for changing how the world
+                  works.</li>
+              </ul>
+
             </div>
-          </p>
-        </div>
-
-
-        <div class="blogosphere">
-          <div class="blogroll-title-info">
-            <h3 class="blogroll-title">Some writings we love</h3>
-            <div class="info-icon">
-              <i class="fas fa-info-circle"></i>
-              <div class="info-popup">
-                <p><em>A note from Ben Pace</em></p>
-                <p>
-                  I don't claim that every blogger invited actively identifies
-                  with the rationalist flag, but I confidently claim that
-                  there is a natural clustering of blogs here that
-                  distinguishes them from the 99%+ of other blogs in the
-                  world that don't fit into this clustering, and I know of no
-                  other name where everyone else also knows what it
-                  refers to.<br><br>
-                  You can also consider it the list of blogs that semi-
-                  regularly links to and has maybe written at least one
-                  critical response to SlateStarCodex/AstralCodexTen,
-                  which I think helps define the cluster, but I don't think
-                  the cluster is about SSC/ACX.<br><br>
-                  I think there's a common thread to a lot of the writers
-                  invited:<br>
-                </p>
-                <ul>
-                  <li>A belief in the ability to break the world down into
-                    parts and understand how it works.</li>
-                  <li>A more specific belief in the ability to do this to our
-                    own minds and decision-making algorithms (as well
-                    as the ability to improve them).</li>
-                  <li>A belief that successfully explaining how the world
-                    works is a powerful step for changing how the world
-                    works.</li>
-                </ul>
-
-              </div>
-            </div>
-            <h4 class="blogroll-subtitle">
-              These sites embody the virtues we want to celebrate. We've sent free tickets to everyone whose site is listed below.
-            </h4>
           </div>
-          <div class="attendees-key">
-            <label class="blog-checkbox"><input type="checkbox" id="toggleCheckbox"> Show confirmed attendees only</label>
-          </div>
-          <div class="blogs" id="blog-list">
-          </div>
+          <h4 class="blogroll-subtitle">
+            These sites embody the virtues we want to celebrate. We've sent free tickets to everyone whose site is
+            listed below.
+          </h4>
         </div>
-      </section>
-
-      <section class="FAQ-section">
-        <div class="campus-map">
-          <a href="https://www.lighthaven.space" target="_blank">
-            <img class="campus-image" src="./public/splash_image_campus_map.jpg"/>
-          </a>
-        </div>  
-        <div class="faq-text">
-          <h2 class="title">FAQ</h2>
-          <div id="faqContent"></div>
+        <div class="attendees-key">
+          <label class="blog-checkbox"><input type="checkbox" id="toggleCheckbox"> Show confirmed attendees only</label>
         </div>
-      </section>
+        <div class="blogs" id="blog-list">
+        </div>
+      </div>
+    </section>
 
-      <!-- <section class="FAQ-section">
+    <section class="FAQ-section">
+      <div class="campus-map">
+        <a href="https://www.lighthaven.space" target="_blank">
+          <img class="campus-image" src="./public/splash_image_campus_map.jpg" />
+        </a>
+      </div>
+      <div class="faq-text">
+        <h2 class="title">FAQ</h2>
+        <div id="faqContent"></div>
+      </div>
+    </section>
+
+    <!-- <section class="FAQ-section">
         <img class="campus-image" src="./public/splash_image_campus_map.jpg"/>
         <div class="text-section buildings">
           <h2 class="title">FAQ</h2>
@@ -203,72 +214,122 @@
         </div>
       </section> -->
 
-      <section class="campus-section">
-        <div class="text-section buildings">
-          <h2><a href="https://www.manifest.is/">Manifest</a></h2>
-            <div>
-              <p>LessOnline and Manifest are both happening at Lighthaven 1 week apart.</p>
-              <p>So we're teaming up with Manifest to offer a discounted ticket to both events.</p>
-              <p>And also you can spend time at Lighthaven in the middle of the week where attendees will be putting on their own events.</p>
-              <p>Go to the Manifest website to learn more, and when you buy the LessOnline ticket you can also buy the Manifest ticket too at a discount!</p>
-              <br/>
-            </div>
-          <a href="https://www.tickettailor.com/events/lightconeinfrastructure/1192821#" class="CTA-button third" target="_blank">
-            Buy tickets now
-          </a>
-        </div>
-        <img class="condensed-image" src="./public/manifold.png"/>
-
-      </section>
-
-      <section class="center-section">
-        <h2 class="title">Timeline</h2>
-        <div id="timeline-section"></div>
-      </section>
-
-      <section class="center-section">
-        <h2 class="title">What is Lighthaven?</h2>
+    <section class="campus-section">
+      <div class="text-section buildings">
+        <h2><a href="https://www.manifest.is/">Manifest</a></h2>
         <div>
-          <p></p>
-          <p>
-            Lighthaven is a space dedicated to hosting educational events and programs that help people think better and to improve humanity's long-term trajectory. 
-          </p>
-          <p>
-            Past programs we hosted and were excited about have been the <a href="https://www.matsprogram.org/">MATS</a> program, which helps young researchers break into the field of AI Alignment and workshops run by the <a href="https://intelligence.org/">Machine Intelligence Research Institute</a> and the <a href="https://topos.institute/">Topos</a> institute on helping people better understand the long-term consequences of developing Artificial General Intelligence.
-          </p>
-          <p>
-            Lighthaven is a project by Lightcone Infrastructure, which is dedicated to facilitating intellectual progress on humanity's most important questions.
-          </p>
+          <p>LessOnline and Manifest are both happening at Lighthaven 1 week apart.</p>
+          <p>So we're teaming up with Manifest to offer a discounted ticket to both events.</p>
+          <p>And also you can spend time at Lighthaven in the middle of the week where attendees will be putting on
+            their own events.</p>
+          <p>Go to the Manifest website to learn more, and when you buy the LessOnline ticket you can also buy the
+            Manifest ticket too at a discount!</p>
+          <br />
         </div>
-      </section>
+        <a href="https://www.tickettailor.com/events/lightconeinfrastructure/1192821#" class="CTA-button third"
+          target="_blank">
+          Buy tickets now
+        </a>
+      </div>
+      <img class="condensed-image" src="./public/manifold.png" />
+
+    </section>
+
+    <section class="center-section">
+      <h2 class="title">Timeline</h2>
+      <div id="timeline-section"></div>
+    </section>
+
+    <section class="center-section">
+      <h2 class="title">What is Lighthaven?</h2>
+      <div>
+        <p></p>
+        <p>
+          Lighthaven is a space dedicated to hosting educational events and programs that help people think better and
+          to improve humanity's long-term trajectory.
+        </p>
+        <p>
+          Past programs we hosted and were excited about have been the <a href="https://www.matsprogram.org/">MATS</a>
+          program, which helps young researchers break into the field of AI Alignment and workshops run by the <a
+            href="https://intelligence.org/">Machine Intelligence Research Institute</a> and the <a
+            href="https://topos.institute/">Topos</a> institute on helping people better understand the long-term
+          consequences of developing Artificial General Intelligence.
+        </p>
+        <p>
+          Lighthaven is a project by Lightcone Infrastructure, which is dedicated to facilitating intellectual progress
+          on humanity's most important questions.
+        </p>
+      </div>
+    </section>
 
 
 
-    </div>
-    <script>
-      var checkbox = document.getElementById('toggleCheckbox');
-      var content = document.getElementsByClassName('not');
+    <section class="tickets-section">
+      <h2 class="title">Buy Tickets</h2>
+      <div class="ticket-row">
+        <div class="ticket">
+          <label>
+            <input type="checkbox" id="standardTicketCheckbox">
+            <h3>Standard</h3>
+          </label>
+          <p>$400</p>
+          <p>Includes breakfast, lunch, and dinner</p>
+          <p>Optional add-ons: bedrooms and childcare</p>
+        </div>
+        <div class="ticket">
+          <label>
+            <input type="checkbox" id="lightweightTicketCheckbox">
+            <h3>Lightweight</h3>
+          </label>
+          <p>$275</p>
+          <p>Doesn't cover food</p>
+          <p>Optional add-ons: bedrooms and childcare</p>
+        </div>
+      </div>
+      <a href="#" id="buyTicketsLink" class="CTA-button third" target="_blank">
+        Buy tickets now
+      </a>
+    </section>
 
-      // checkbox.addEventListener('change', function () {
-      //   console.log('changed');
-      //   console.log(content);
-      //     if (this.checked) {
-      //       Array.from(content).forEach(div => {
-      //           div.style.display = 'none';
-      //       });
-      //     } else {
-      //       Array.from(content).forEach(div => {
-      //         div.style.display = 'inline-block';
-      //       });          
-      //     }
-      // });
 
-      checkbox.addEventListener('change', function () {
-        Array.from(content).forEach(div => {
-          div.classList.toggle('hidden');
-        });
+
+  </div>
+  <script>
+    var checkbox = document.getElementById('toggleCheckbox');
+    var content = document.getElementsByClassName('not');
+    checkbox.addEventListener('change', function () {
+      Array.from(content).forEach(div => {
+        div.classList.toggle('hidden');
       });
+    });
 
-    </script>
-  </body>
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var standardCheckbox = document.getElementById('standardTicketCheckbox');
+      var lightweightCheckbox = document.getElementById('lightweightTicketCheckbox');
+      var buyTicketsLink = document.getElementById('buyTicketsLink');
+
+      function updateTicketLink() {
+        var link = 'https://www.tickettailor.com/events/lightconeinfrastructure/1192821#';
+        if (standardCheckbox.checked && !lightweightCheckbox.checked) {
+          link = 'https://buy.stripe.com/bIY7w96ua9fbfVmbIL';
+        } else if (!standardCheckbox.checked && lightweightCheckbox.checked) {
+          link = 'https://buy.stripe.com/7sI2bP9Gm0IFaB2bIM';
+        } else if (standardCheckbox.checked && lightweightCheckbox.checked) {
+          link = 'https://buy.stripe.com/aEU9Eh5q6ajffVmdQS';
+        }
+        buyTicketsLink.href = link;
+      }
+
+      standardCheckbox.addEventListener('change', updateTicketLink);
+      lightweightCheckbox.addEventListener('change', updateTicketLink);
+
+      // Initialize the link based on the default checkbox states
+      updateTicketLink();
+    });
+  </script>
+</body>
+
 </html>
