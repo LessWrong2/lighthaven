@@ -1204,8 +1204,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 20px;
 }
 
 .ticket-row {
