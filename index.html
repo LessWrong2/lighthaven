@@ -103,9 +103,9 @@
           <!-- <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
                 Buy tickets
               </a> -->
-          <a href="https://www.tickettailor.com/events/lightconeinfrastructure/1192821#" class="CTA-button third"
+          <a href="#" onclick="scrollToTicketsSection()" class="CTA-button third"
             target="_blank">
-            Buy a Ticket
+            Buy Tickets
           </a>
         </div>
         <!-- <div class="attendees-key">
@@ -235,32 +235,50 @@
 
     </section>
 
-    <section class="tickets-section">
+    <section class="center-section">
+      <!-- <h2 class="title">Timeline</h2> -->
+      <div id="timeline-section"></div>
+    </section>
+
+    <section class="tickets-section" id="tickets-section">
       <h2 class="title">Buy Tickets</h2>
+      <p class="ticket-info">Tickets include lunch, dinner, and snacks. Tickets do not automatically include housing and childcare; those can be purchased as add-ons below.</p>
       <div class="ticket-row">
         <div class="ticket">
           <label>
             <input type="checkbox" id="lessOnlineCheckbox">
-            <h3>LessOnline</h3>
+            <h3><b>LessOnline</b></h3>
           </label>
           <p>$400, minus your LessWrong karma in cents</p>
-          <p>Includes breakfast, lunch, and dinner</p>
+          <ui>
+            <li>Admission to the Lighthaven venue</li>
+            <li>Talks, blogging workshops, memo sessions, and more</li>
+            <li>Lunch, dinner, and snacks every day</li>
+          </ui>
         </div>
         <div class="ticket">
           <label>
             <input type="checkbox" id="summerCampCheckbox">
-            <h3>Summer Camp</h3>
+            <h3><b>Summer Camp</b></h3>
           </label>
           <p>$250</p>
-          <p>Includes breakfast, lunch, and dinner</p>
+          <ui>
+            <li>Admission to the Lighthaven venue</li>
+            <li>Coworking space, workshops, and talks</li>
+            <li>Lunch, dinner, and snacks every day</li>
+          </ui>
         </div>
         <div class="ticket">
           <label>
             <input type="checkbox" id="manifestCheckbox">
-            <h3>Manifest</h3>
+            <h3><b>Manifest</b></h3>
           </label>
           <p>$300 (or $399 without LessOnline ticket)</p>
-          <p>Includes breakfast, lunch, and dinner</p>
+          <ui>
+            <li>Admission to the Lighthaven venue</li>
+            <li>Access to 3 days of talks, workshops, and events</li>
+            <li>5 meals + snacks throughout the weekend</li>
+          </ui>
         </div>
       </div>
       <div class="buy-tickets-button">
@@ -270,10 +288,32 @@
       </div>
     </section>
 
-    <section class="center-section">
-      <h2 class="title">Timeline</h2>
-      <div id="timeline-section"></div>
+    <section class="tickets-section" id="tickets-section">
+      <h2 class="title">Plus! Childcare</h2>
+      <div class="ticket-row">
+        <div class="ticket">
+          <label>
+            <input type="checkbox" id="childcare3Checkbox">
+            <h3>Childcare (3 days)</h3>
+          </label>
+          <p>10am to 8pm, any 3 day span within May 31 - Jun 9</p>
+        </div>
+        <div class="ticket">
+          <label>
+            <input type="checkbox" id="childcare10Checkbox">
+            <h3>Childcare (10 days)</h3>
+          </label>
+          <p>10am to 8pm, May 31 - Jun 9</p>
+        </div>
+      </div>
+      <div class="buy-tickets-button">
+        <a href="#" id="buyChildcareLink" class="CTA-button third" target="_blank">
+          Buy childcare: <span id="childCarePrice">$0</span>
+        </a>
+      </div>
     </section>
+
+
 
     <section class="center-section">
       <h2 class="title">What is Lighthaven?</h2>
@@ -369,6 +409,62 @@
       // Initialize the link based on the default checkbox states
       updateTicketLink();
     });
+  </script>
+
+  <script>
+    // Childcare
+    document.addEventListener('DOMContentLoaded', function () {
+      var childcare3Checkbox = document.getElementById('childcare3Checkbox');
+      var childcare10Checkbox = document.getElementById('childcare10Checkbox');
+      var buyChildcareLink = document.getElementById('buyChildcareLink');
+      var childCarePriceDisplay = document.getElementById('childCarePrice'); // Assuming you have an element to display the price
+
+      function updateChildcareLink() {
+
+        var link = '#';
+        var price = 0;
+
+        var childcare3TicketLink = 'https://buy.stripe.com/3cs7w96ua8b7aB24gl';
+        var childcare10TicketLink = 'https://buy.stripe.com/28o9Eh4m2fDz8sU14a';
+
+        var c3 = childcare3Checkbox.checked;
+        var c10 = childcare10Checkbox.checked;
+
+        if (c3 && !c10) {
+          link = childcare3TicketLink;
+          price = 150;
+        } else if (c10) {
+          link = childcare10TicketLink;
+          price = 300;
+        }
+
+        // Update the displayed price
+        if (childCarePriceDisplay) {
+          childCarePriceDisplay.textContent = `$${price}`;
+        }
+
+        buyChildcareLink.href = link;
+      }
+
+      childcare3Checkbox.addEventListener('change', updateChildcareLink);
+      childcare10Checkbox.addEventListener('change', updateChildcareLink);
+
+      // Initialize the link based on the default checkbox states
+      updateChildcareLink();
+    });
+  </script>  
+
+  <script>
+    function scrollToTicketsSection() {
+      // Prevent the default anchor behavior
+      event.preventDefault();
+      
+      // Find the tickets-section element
+      const ticketsSection = document.getElementById('tickets-section');
+      
+      // Scroll to the tickets-section smoothly
+      ticketsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   </script>
 </body>
 

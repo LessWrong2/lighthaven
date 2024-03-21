@@ -1212,10 +1212,27 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 80px;
+  padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.ticket {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border-radius: 15px; */
+  max-width: 300px;
+  min-width: 300px;
+  /* flex: 1; */
 }
 
 /* .buy-tickets-button {
   padding-top: 20px;
 } */
+
+.ticket-info {
+  max-width: 650px;
+  text-align: center;
+}
