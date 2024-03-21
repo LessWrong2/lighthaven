@@ -1053,6 +1053,7 @@ h4 {
 
 .info {
   font-size: 20px;
+  text-shadow: 0 0 6px BLACK;
 }
 
 .info-icon {
