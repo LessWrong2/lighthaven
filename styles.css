@@ -31,6 +31,55 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  section.blogroll-section {
+      display: block;
+  }
+
+  .event-description {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .blogosphere {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  section.FAQ-section {
+      display: block;
+  }
+
+  .campus-map {
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .faq-text {
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  section.campus-section {
+      display: block;
+  }
+
+  .text-section.buildings {
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  a.CTA-button.third {
+      display: inline-block;
+      margin-bottom: 10px;
+  }
+
+  img.condensed-image {
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
 
 a {
   text-decoration: none;
