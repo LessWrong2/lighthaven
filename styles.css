@@ -307,11 +307,20 @@ section {
 }
 
 .blogroll-title {
+  display: inline-block;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
   font-size: 26px;
+}
+
+.blogroll-subtitle {
+  display: block;
+  font-size: 19px;
+  color: grey;
+  font-style: italic;
+  text-wrap: balance;
 }
 
 .ben-testimonial {
@@ -1057,7 +1066,7 @@ h4 {
 }
 
 .info-icon {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   font-size: 18px;
@@ -1093,14 +1102,14 @@ h4 {
 } */
 
 .info-icon:hover .info-popup {
+  display: inline-block;
   visibility: visible;
   opacity: 1;
   z-index: 2;
 }
 
 .blogroll-title-info {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .footnote {
