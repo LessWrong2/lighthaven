@@ -226,13 +226,57 @@
             Manifest ticket too at a discount!</p>
           <br />
         </div>
-        <a href="https://www.tickettailor.com/events/lightconeinfrastructure/1192821#" class="CTA-button third"
+        <!-- <a href="https://www.tickettailor.com/events/lightconeinfrastructure/1192821#" class="CTA-button third"
           target="_blank">
           Buy tickets now
-        </a>
+        </a> -->
       </div>
       <img class="condensed-image" src="./public/manifold.png" />
 
+    </section>
+
+    <section class="tickets-section">
+      <h2 class="title">Buy Tickets</h2>
+
+      <div class="ticket-row">
+
+        <div class="ticket">
+          <label>
+            <input type="checkbox" id="lessOnlineCheckbox">
+            <h3>LessOnline</h3>
+          </label>
+          <p>$400, minus your LessWrong karma in cents</p>
+          <p>Includes breakfast, lunch, and dinner</p>
+          <p>Optional add-ons: bedrooms and childcare</p>
+        </div>
+
+        <div class="ticket">
+          <label>
+            <input type="checkbox" id="summerCampCheckbox">
+            <h3>Summer Camp</h3>
+          </label>
+          <p>$250</p>
+          <p>Doesn't cover food</p>
+          <p>Optional add-ons: bedrooms and childcare</p>
+        </div>
+
+        <div class="ticket">
+          <label>
+            <input type="checkbox" id="manifestCheckbox">
+            <h3>Manifest</h3>
+          </label>
+          <p>$399</p>
+          <p>Doesn't cover food</p>
+          <p>Optional add-ons: bedrooms and childcare</p>
+        </div>
+
+
+      </div>
+      <div class="buy-tickets-button">
+        <a href="#" id="buyTicketsLink" class="CTA-button third" target="_blank">
+          Buy tickets: <span id="ticketPrice">$0</span>
+        </a>
+      </div>
     </section>
 
     <section class="center-section">
@@ -263,36 +307,6 @@
     </section>
 
 
-
-    <section class="tickets-section">
-      <h2 class="title">Buy Tickets</h2>
-      <div class="ticket-row">
-        <div class="ticket">
-          <label>
-            <input type="checkbox" id="standardTicketCheckbox">
-            <h3>Standard</h3>
-          </label>
-          <p>$400</p>
-          <p>Includes breakfast, lunch, and dinner</p>
-          <p>Optional add-ons: bedrooms and childcare</p>
-        </div>
-        <div class="ticket">
-          <label>
-            <input type="checkbox" id="lightweightTicketCheckbox">
-            <h3>Lightweight</h3>
-          </label>
-          <p>$275</p>
-          <p>Doesn't cover food</p>
-          <p>Optional add-ons: bedrooms and childcare</p>
-        </div>
-      </div>
-      <a href="#" id="buyTicketsLink" class="CTA-button third" target="_blank">
-        Buy tickets now
-      </a>
-    </section>
-
-
-
   </div>
   <script>
     var checkbox = document.getElementById('toggleCheckbox');
@@ -307,24 +321,58 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var standardCheckbox = document.getElementById('standardTicketCheckbox');
-      var lightweightCheckbox = document.getElementById('lightweightTicketCheckbox');
+      var lessOnlineCheckbox = document.getElementById('lessOnlineCheckbox');
+      var summerCampCheckbox = document.getElementById('summerCampCheckbox');
+      var manifestCheckbox = document.getElementById('manifestCheckbox');
       var buyTicketsLink = document.getElementById('buyTicketsLink');
+      var ticketPriceDisplay = document.getElementById('ticketPrice'); // Assuming you have an element to display the price
 
       function updateTicketLink() {
-        var link = 'https://www.tickettailor.com/events/lightconeinfrastructure/1192821#';
-        if (standardCheckbox.checked && !lightweightCheckbox.checked) {
-          link = 'https://buy.stripe.com/bIY7w96ua9fbfVmbIL';
-        } else if (!standardCheckbox.checked && lightweightCheckbox.checked) {
-          link = 'https://buy.stripe.com/7sI2bP9Gm0IFaB2bIM';
-        } else if (standardCheckbox.checked && lightweightCheckbox.checked) {
-          link = 'https://buy.stripe.com/aEU9Eh5q6ajffVmdQS';
+
+        var price = 0;
+
+
+        var manifestTicketLink = 'https://www.tickettailor.com/events/manifoldmarketsinc/1166167';
+        var lessOnlineTicketLink = 'https://buy.stripe.com/bIY7w96ua9fbfVmbIL';
+        var lessOnlineManifestTicketLink = 'https://buy.stripe.com/aEU9Eh5q6ajffVmdQS';
+        var allThreeTicketLink = 'https://buy.stripe.com/7sI2bP9Gm0IFaB2bIM';
+
+        var lo = lessOnlineCheckbox.checked;
+        var sc = summerCampCheckbox.checked;
+        var m = manifestCheckbox.checked;
+
+        var link = 'https://www.tickettailor.com/events/manifoldmarketsinc/1166167';
+        if (lo && !sc && !m) {
+          link = lessOnlineTicketLink;
+          price = 400;
+        } else if (lo && !sc && m) {
+          link = lessOnlineManifestTicketLink;
+          price = 799;
+        } else if (lo && sc && !m) {
+          price = 650;
+        } else if (lo && sc && m) {
+          link = allThreeTicketLink;
+          price = 850;
+        } else if (sc && m) {
+          link = manifestTicketLink;
+          price = 649;
+        } else if (sc) {
+          price = 250;
+        } else if (m) {
+          price = 399;
         }
+
+        // Update the displayed price
+        if (ticketPriceDisplay) {
+          ticketPriceDisplay.textContent = `$${price}`;
+        }
+
         buyTicketsLink.href = link;
       }
 
-      standardCheckbox.addEventListener('change', updateTicketLink);
-      lightweightCheckbox.addEventListener('change', updateTicketLink);
+      lessOnlineCheckbox.addEventListener('change', updateTicketLink);
+      summerCampCheckbox.addEventListener('change', updateTicketLink);
+      manifestCheckbox.addEventListener('change', updateTicketLink);
 
       // Initialize the link based on the default checkbox states
       updateTicketLink();
