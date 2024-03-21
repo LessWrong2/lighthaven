@@ -237,9 +237,7 @@
 
     <section class="tickets-section">
       <h2 class="title">Buy Tickets</h2>
-
       <div class="ticket-row">
-
         <div class="ticket">
           <label>
             <input type="checkbox" id="lessOnlineCheckbox">
@@ -247,30 +245,23 @@
           </label>
           <p>$400, minus your LessWrong karma in cents</p>
           <p>Includes breakfast, lunch, and dinner</p>
-          <p>Optional add-ons: bedrooms and childcare</p>
         </div>
-
         <div class="ticket">
           <label>
             <input type="checkbox" id="summerCampCheckbox">
             <h3>Summer Camp</h3>
           </label>
           <p>$250</p>
-          <p>Doesn't cover food</p>
-          <p>Optional add-ons: bedrooms and childcare</p>
+          <p>Includes breakfast, lunch, and dinner</p>
         </div>
-
         <div class="ticket">
           <label>
             <input type="checkbox" id="manifestCheckbox">
             <h3>Manifest</h3>
           </label>
-          <p>$399</p>
-          <p>Doesn't cover food</p>
-          <p>Optional add-ons: bedrooms and childcare</p>
+          <p>$300 (or $399 without LessOnline ticket)</p>
+          <p>Includes breakfast, lunch, and dinner</p>
         </div>
-
-
       </div>
       <div class="buy-tickets-button">
         <a href="#" id="buyTicketsLink" class="CTA-button third" target="_blank">
@@ -331,10 +322,10 @@
 
         var price = 0;
 
-
         var manifestTicketLink = 'https://www.tickettailor.com/events/manifoldmarketsinc/1166167';
         var lessOnlineTicketLink = 'https://buy.stripe.com/bIY7w96ua9fbfVmbIL';
         var lessOnlineManifestTicketLink = 'https://buy.stripe.com/aEU9Eh5q6ajffVmdQS';
+        var lessOnlineSummerCampTicketLink = 'https://buy.stripe.com/4gw17LbOu1MJ24wcMN';
         var allThreeTicketLink = 'https://buy.stripe.com/7sI2bP9Gm0IFaB2bIM';
 
         var lo = lessOnlineCheckbox.checked;
@@ -349,6 +340,7 @@
           link = lessOnlineManifestTicketLink;
           price = 799;
         } else if (lo && sc && !m) {
+          link = lessOnlineSummerCampTicketLink;
           price = 650;
         } else if (lo && sc && m) {
           link = allThreeTicketLink;
