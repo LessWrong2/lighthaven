@@ -1062,14 +1062,14 @@ h4 {
   text-shadow: 0 0 6px BLACK;
 }
 
-.info-icon {
+.splash-text .info-icon {
   display: inline-block;
   justify-content: center;
   align-items: center;
   font-size: 18px;
 }
 
-.info-icon {
+.splash-text .info-icon {
   font-size: 14px;
   vertical-align: super;
   position: relative;
@@ -1094,7 +1094,7 @@ h4 {
   width: 230px;
 }
 
-.info-popup p {
+.splash-text .info-popup p {
   margin-bottom: 0px;
 }
 
@@ -1103,7 +1103,7 @@ h4 {
   font-size: 20px; 
 }
 
-.fa-solid, .fas {
+.splash-text .fa-solid, .splash-text .fas {
   font-family: inherit !important;
   font-weight: 600 !important;
 }
