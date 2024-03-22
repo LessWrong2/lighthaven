@@ -287,6 +287,9 @@
         </a>
       </div>
     </section>
+    <section>
+      
+    </section>
 
     <!-- <section class="tickets-section" id="tickets-section">
       <h2 class="title">Plus! Childcare</h2>
@@ -367,6 +370,9 @@
           price = 250;
         } else if (m) {
           price = 399;
+        } else if (!lo && !sc && !m) {
+          link = '#';
+          
         }
 
         // Update the displayed price
@@ -375,6 +381,13 @@
         }
 
         buyTicketsLink.href = link;
+
+        buyTicketsLink.onclick = function(event) {
+          if (!lo && !sc && !m) {
+            event.preventDefault(); // Prevent navigating
+            alert("You must select your ticket(s) before buying them");
+          }
+        };
       }
 
       lessOnlineCheckbox.addEventListener('change', updateTicketLink);
