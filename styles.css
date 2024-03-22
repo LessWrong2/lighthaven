@@ -1070,22 +1070,43 @@ h4 {
   font-size: 18px;
 }
 
-.info-icon .info-popup {
-  visibility: hidden;
-  background-color: var(--light-grey);
+.info-icon {
+  font-size: 14px;
+  vertical-align: super;
+  position: relative;
+  font-weight: 800;
+}
+
+.info-popup {
+  display: none;
+  color: rgba(0,0,0,0.87) !important;
+  text-shadow: none;
+  background-color: white;
   color: #fff;
   text-align: left;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 8px;
   position: absolute;
   z-index: 1;
-  max-width: 800px;
-  /* bottom: 125%;
-  left: 50%; */
-  margin-left: -900px;
-  margin-top: 200px;
   opacity: 1;
-  transition: opacity 0.3s;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+  width: 230px;
+}
+
+.info-popup p {
+  margin-bottom: 0px;
+}
+
+.fa-circle-info:before, .fa-info-circle:before{
+  content: "[1]" !important;
+  font-size: 20px; 
+}
+
+.fa-solid, .fas {
+  font-family: inherit !important;
+  font-weight: 600 !important;
 }
 
 /* .info-icon .info-popup::after {
