@@ -7,7 +7,6 @@
   <meta property="twitter:image:src"
     content="https://cdn.discordapp.com/attachments/1086441174245593118/1219835448545906738/image.png?ex=660cbf4a&is=65fa4a4a&hm=6ec6ca481d73b15d7a4fbf9bb5cf303156daa3452cb4055ef55f1ee0f5bf53ee&">
   <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="manifest.css">
   <link rel="stylesheet" href="styles.css">
   <!-- <link rel="stylesheet" href="manifest-style.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -72,7 +71,21 @@
     fetch('timeline.html')
       .then(response => response.text())
       .then(html => {
-        document.getElementById('timeline-section').innerHTML = html;
+        const host = document.querySelector("#timeline-section");
+        const shadow = host.attachShadow({ mode: "open" });
+        const content = document.createElement("div");
+        content.innerHTML = html;
+        shadow.appendChild(content);
+        fetch('manifest.css')
+          .then(response => response.text())
+          .then(css => {
+            const sheet = new CSSStyleSheet();
+            sheet.replaceSync(css);
+            shadow.adoptedStyleSheets = [sheet];
+          })
+          .catch(error => {
+            console.error('Error loading the FAQ content:', error);
+        });
       })
       .catch(error => {
         console.error('Error loading the FAQ content:', error);
@@ -81,17 +94,6 @@
 </head>
 
 <body>
-  <div class="navbar">
-    <!-- <a href="index.html" class="logo">
-        <img class="logo-image"
-          src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
-        />
-        <div class="navbar-title">Lighthaven</div>
-      </a>
-      <a href="https://airtable.com/appIDSB5FN81es9PE/shrkHA9uGBXTexxRN" class="CTA-button-navbar" target="_blank">
-        Submit an inquiry
-      </a> -->
-  </div>
   <div class="content-area">
     <section class="splash-section background-image">
       <div class="splash-text">
@@ -100,19 +102,11 @@
         <div class="info"><em><a href="https://www.lighthaven.space/">Berkeley, CA, Lighthaven</a>: May 31 - Jun 2</em>
         </div>
         <div class="cta-row">
-          <!-- <a href="#" onclick="window.Intercom('showNewMessage', `I'm interested in running an event. Here's a few details: `)" class="CTA-button primary">
-                Buy tickets
-              </a> -->
           <a href="#" onclick="scrollToTicketsSection()" class="CTA-button third"
             target="_blank">
             Buy Tickets
           </a>
         </div>
-        <!-- <div class="attendees-key">
-              <label><input type="checkbox" id="toggleCheckbox"> Show attendees only</label>
-            </div> -->
-        <!-- <div class="blogs" id="blog-list">
-            </div> -->
       </div>
     </section>
 
@@ -132,9 +126,6 @@
           falsehood using insights from probability theory, cognitive science, and AI."
           <span class="footnote"><a href="https://www.astralcodexten.com/about#§where-did-all-this-come-from"
               target="_blank">[1]</a>
-            <span class="tooltip">
-              Astral Codex Ten
-            </span>
           </span>
           <br /><br />
           The structure will be determined by you: We'll have a collaborative schedule for "unconference" sessions,
@@ -203,7 +194,6 @@
         </div>
       </div>
     </section>
-
     <section class="FAQ-section">
       <div class="campus-map">
         <a href="https://www.lighthaven.space" target="_blank">
@@ -260,11 +250,11 @@
             <h3><b>LessOnline</b></h3>
           </label>
           <p>$400, minus your LessWrong karma in cents</p>
-          <ui>
+          <ul>
             <li>Admission to the Lighthaven venue</li>
             <li>Talks, blogging workshops, memo sessions, and more</li>
             <li>Lunch, dinner, and snacks every day</li>
-          </ui>
+          </ul>
         </div>
         <div class="ticket">
           <label>
@@ -272,11 +262,11 @@
             <h3><b>Summer Camp</b></h3>
           </label>
           <p>$250</p>
-          <ui>
+          <ul>
             <li>Admission to the Lighthaven venue</li>
             <li>Coworking space, workshops, and talks</li>
             <li>Lunch, dinner, and snacks every day</li>
-          </ui>
+          </ul>
         </div>
         <div class="ticket">
           <label>
@@ -284,11 +274,11 @@
             <h3><b>Manifest</b></h3>
           </label>
           <p>$300 (or $399 without LessOnline ticket)</p>
-          <ui>
+          <ul>
             <li>Admission to the Lighthaven venue</li>
             <li>Access to 3 days of talks, workshops, and events</li>
             <li>5 meals + snacks throughout the weekend</li>
-          </ui>
+          </ul>
         </div>
       </div>
       <div class="buy-tickets-button">
