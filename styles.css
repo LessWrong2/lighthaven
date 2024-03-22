@@ -10,25 +10,12 @@
   --light-green: #81C784;
 }
 
-/* Then you can use it like this */
-.element {
-  background: var(--main-color);
-  border: 0px solid var(--main-color);
-}
-
 body {
   font-family: verdigris-mvb-pro-text, serif;
   /* max-width: 1100px; */
-  padding: 30px;
   margin-left: auto;
   margin-right: auto;
   color: var(--greyish);
-}
-
-@media (max-width: 800px) {
-  body {
-    padding: 15px;
-  }
 }
 
 a {
@@ -57,6 +44,7 @@ p, li {
 
 li {
   margin-bottom: 0.3em;
+  list-style-position: outside;
 }
 
 aside {
@@ -81,6 +69,12 @@ h1 {
   text-shadow: 0px 0px 5px rgba(0,0,0,1);
 
   /* color: rgba(50,50,50); */
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 12vw;
+  }
 }
 
 section {
@@ -215,9 +209,6 @@ section {
 }
 
 .splash-section {
-  margin-top: -88px;
-  margin-left: -30px;
-  margin-right: -30px;
   margin-bottom: 50px;
 }
 
@@ -250,6 +241,7 @@ section {
     margin-right: auto;
     margin-top: -50px;
     margin-bottom: 50px;
+    padding-bottom: 0px !important;
     width:100%; 
   }
 }
@@ -307,7 +299,6 @@ section {
 
 .blogroll-title {
   display: inline-block;
-  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -338,6 +329,7 @@ section {
   /* padding-top: 50px; */
   flex: 3.5;
   min-width: 300px;
+  text-align: center;
 }
 
 .text-section {
@@ -437,12 +429,16 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
+  max-width: 80vw;
   margin-left: auto;
   margin-right: auto;
 }
 .center-section h2 {
   text-align: center;
+}
+
+#timeline-section {
+  max-width: 100%;
 }
 
 .FAQ-section {
@@ -455,7 +451,6 @@ h4 {
   /* row-gap: 12px; */
   column-gap: 90px;
   align-items: flex-start;
-  padding: 100px;
 
   /* justify-content: space-evenly */
 
@@ -482,8 +477,8 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 800px;
   margin-top: 0;
+  width: 60%;
 }
 
 .splash-text {
@@ -964,7 +959,6 @@ h4 {
 .blogs {
   /* white-space: nowrap; */
   position: relative;
-  text-align: center;
   z-index: 1; /* Add a higher z-index value to override gradient*/  
   font-size: 18px; /* Remove the default font-size */
 }
@@ -977,7 +971,7 @@ h4 {
   text-decoration: none;
   transition: color 0.1s;
   /* padding: 5px; Add padding for better click area */
-  margin-left: 18px;
+  margin-right: 18px;
 }
 
 .blogs .not a {
@@ -988,7 +982,7 @@ h4 {
   text-decoration: none;
   transition: color 0.1s;
   /* padding: 5px; Add padding for better click area */
-  margin-left: 18px;
+  margin-right: 18px;
 }
 
 .attending {
@@ -1007,7 +1001,6 @@ h4 {
 
 .attendees-key {
   z-index: 1;
-  text-align: center;
   padding-bottom: 20;
   position: relative;
   color: var(--green);
@@ -1111,9 +1104,8 @@ h4 {
   z-index: 2;
 }
 
-.blogroll-title-info {
-  text-align: center;
-}
+/* .blogroll-title-info {
+} */
 
 .footnote {
   position: relative;
@@ -1151,59 +1143,6 @@ h4 {
   border-radius: 5px;
 }
 
-@media (max-width: 800px) {
-  section.blogroll-section {
-      display: block;
-      padding-left: 8px;
-      padding-right: 8px;
-  }
-
-  .event-description {
-      margin-left: auto;
-      margin-right: auto;
-      width: unset;
-  }
-
-  .blogosphere {
-      margin-left: auto;
-      margin-right: auto;
-  }
-
-  section.FAQ-section {
-      display: block;
-  }
-
-  .campus-map {
-      margin-right: auto;
-      margin-left: auto;
-  }
-
-  .faq-text {
-      margin-right: auto;
-      margin-left: auto;
-  }
-
-  section.campus-section {
-      display: block;
-  }
-
-  .text-section.buildings {
-      margin-right: auto;
-      margin-left: auto;
-  }
-
-  a.CTA-button.third {
-      display: inline-block;
-      margin-bottom: 10px;
-  }
-
-  img.condensed-image {
-      margin-top: 60px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-}
-
 .tickets-section {
   display: flex;
   flex-direction: column;
@@ -1231,6 +1170,16 @@ h4 {
   /* flex: 1; */
 }
 
+.ticket label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket label span {
+  margin-top: 6px;
+}
+
 /* .buy-tickets-button {
   padding-top: 20px;
 } */
@@ -1239,3 +1188,92 @@ h4 {
   max-width: 650px;
   text-align: center;
 }
+
+@media (max-width: 800px) {
+  section.blogroll-section {
+      display: block;
+      padding-left: 8px;
+      padding-right: 8px;
+  }
+
+  .event-description {
+      margin-left: auto;
+      margin-right: auto;
+      width: unset;
+      max-width: unset;
+  }
+
+  .blogosphere {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      width: unset;
+      max-width: unset;
+  }
+
+  section.FAQ-section {
+      display: block;
+      padding: 8px;
+  }
+
+  .campus-map {
+      margin-right: auto;
+      margin-left: auto;
+      width: unset;
+  }
+
+  .faq-text {
+      margin-right: auto;
+      margin-left: auto;
+      width: unset;
+  }
+
+  section.campus-section {
+      display: block;
+  }
+
+  .text-section.buildings {
+      margin-right: auto;
+      margin-left: auto;
+      width: unset;
+      max-width: unset;
+      padding: 8px;
+  }
+
+  a.CTA-button.third {
+      display: inline-block;
+      margin-bottom: 10px;
+  }
+
+  img.condensed-image {
+      margin-left: auto;
+      margin-right: auto;
+      width: unset;
+  }
+
+  .tickets-section {
+    padding: 8px;
+    align-items: flex-start;
+  }
+
+  .tickets-section .title {
+    margin-bottom: 20px;
+  }
+
+  .ticket-info {
+    text-align: left;
+  }
+
+  .ticket {
+    max-width: unset;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .ticket-row {
+    gap: 25px;
+    padding-top: 20px;
+  }
+
+}
+
