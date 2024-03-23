@@ -1177,7 +1177,7 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 80px;
+  gap: 16px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1190,13 +1190,59 @@ h4 {
   border-radius: 15px; */
   max-width: 300px;
   min-width: 300px;
+  position: relative;
   /* flex: 1; */
+}
+
+input:checked + label {
+  box-shadow: 1px 1px 7px #0000004f;
+  border: 3px solid var(--green);
+}
+
+.ticket input {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  accent-color: var(--green);
+}
+
+.ticket h3 {
+  margin-top: 0px;
 }
 
 .ticket label {
   display: flex;
-  align-items: center;
+  height: 100%;
+  /* align-items: center; */
   gap: 8px;
+  flex-direction: column;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 2px 3px 5px #0000005c;
+  border-radius: 8px;
+  border: 3px solid transparent;
+}
+
+.ticket label ul {
+  overflow: hidden;
+  margin: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  .ticket label ul {
+    height: 0px;
+  }
+  input:checked + label ul {
+    height: inherit;
+  }
+}
+
+.ticket label:hover {
+  box-shadow: 2px 3px 8px #0000008c;
+}
+
+.ticket label p {
+  margin-bottom: 0px;
 }
 
 .ticket label span {

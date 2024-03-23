@@ -221,45 +221,46 @@
       <p class="ticket-info">Tickets include lunch, dinner, and snacks. Tickets do not automatically include housing and childcare; those can be purchased as add-ons below.</p>
       <div class="ticket-row">
         <div class="ticket">
-          <label>
-            <input type="checkbox" id="lessOnlineCheckbox">
+          <input type="checkbox" id="lessOnlineCheckbox">
+          <label for="lessOnlineCheckbox">
             <h3><b>LessOnline</b></h3>
+            <p>$400, minus your LessWrong karma in cents</p>
+            <ul>
+              <li>Admission to the Lighthaven venue</li>
+              <li>Talks, blogging workshops, memo sessions, and more</li>
+              <li>Lunch, dinner, and snacks every day</li>
+            </ul>
           </label>
-          <p>$400, minus your LessWrong karma in cents</p>
-          <ul>
-            <li>Admission to the Lighthaven venue</li>
-            <li>Talks, blogging workshops, memo sessions, and more</li>
-            <li>Lunch, dinner, and snacks every day</li>
-          </ul>
+          
         </div>
         <div class="ticket">
-          <label>
-            <input type="checkbox" id="summerCampCheckbox">
+          <input type="checkbox" id="summerCampCheckbox">
+          <label for="summerCampCheckbox">
             <h3><b>Summer Camp</b></h3>
+            <p>$250</p>
+            <ul>
+              <li>Admission to the Lighthaven venue</li>
+              <li>Coworking space, workshops, and talks</li>
+              <li>Lunch, dinner, and snacks every day</li>
+            </ul>
           </label>
-          <p>$250</p>
-          <ul>
-            <li>Admission to the Lighthaven venue</li>
-            <li>Coworking space, workshops, and talks</li>
-            <li>Lunch, dinner, and snacks every day</li>
-          </ul>
         </div>
         <div class="ticket">
-          <label>
-            <input type="checkbox" id="manifestCheckbox">
+          <input type="checkbox" id="manifestCheckbox">
+          <label for="manifestCheckbox">
             <h3><b>Manifest</b></h3>
+            <p>$300 (or $399 without LessOnline ticket)</p>
+            <ul>
+              <li>Admission to the Lighthaven venue</li>
+              <li>Access to 3 days of talks, workshops, and events</li>
+              <li>5 meals + snacks throughout the weekend</li>
+            </ul>
           </label>
-          <p>$300 (or $399 without LessOnline ticket)</p>
-          <ul>
-            <li>Admission to the Lighthaven venue</li>
-            <li>Access to 3 days of talks, workshops, and events</li>
-            <li>5 meals + snacks throughout the weekend</li>
-          </ul>
         </div>
       </div>
       <div class="buy-tickets-button">
         <a href="#" id="buyTicketsLink" class="CTA-button third" target="_blank">
-          Buy tickets: <span id="ticketPrice">$0</span>
+          <span id="ticketPrice">$0</span>
         </a>
       </div>
     </section>
@@ -373,7 +374,7 @@
 
         // Update the displayed price
         if (ticketPriceDisplay) {
-          ticketPriceDisplay.textContent = `$${price}`;
+          ticketPriceDisplay.textContent = price > 0 ?`Buy Tickets: $${price}` : 'Select your ticket(s)';
         }
 
         buyTicketsLink.href = link;
