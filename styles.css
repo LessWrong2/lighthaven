@@ -1258,7 +1258,7 @@ input:checked + label {
 } */
 
 .ticket-info {
-  max-width: 650px;
+  max-width: 750px;
   text-align: center;
 }
 
