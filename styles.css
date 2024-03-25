@@ -1262,6 +1262,10 @@ input:checked + label {
   text-align: center;
 }
 
+.price {
+  font-size: 24px;
+}
+
 @media (max-width: 800px) {
   section.blogroll-section {
       display: block;
@@ -1349,4 +1353,5 @@ input:checked + label {
   }
 
 }
+
 
