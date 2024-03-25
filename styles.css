@@ -47,6 +47,10 @@ li {
   list-style-position: outside;
 }
 
+.payment-img {
+  margin: 10px;
+}
+
 aside {
   font-size: 16px;
 }
