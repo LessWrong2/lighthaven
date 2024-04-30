@@ -153,6 +153,7 @@ section {
   font-size: 24px;
   padding: 12px 18px;
   opacity: 100%;
+  display: block;
 }
 .CTA-button.third:hover {
   background: var(--light-goldish);
@@ -1218,7 +1219,7 @@ h4 {
   justify-content: center;
   gap: 16px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .ticket {
@@ -1297,6 +1298,15 @@ input:checked + label {
   text-align: center;
 }
 
+.ticket-extra {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ticket-extra a {
+  color: var(--green);
+}
+
 .price {
   font-size: 24px;
 }
@@ -1353,7 +1363,7 @@ input:checked + label {
   }
 
   a.CTA-button.third {
-      display: inline-block;
+      display: block;
       margin-bottom: 10px;
   }
 
