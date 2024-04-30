@@ -10,6 +10,10 @@
   --light-green: #81C784;
 }
 
+ul {
+  margin-block-start: 0px;
+}
+
 body {
   font-family: verdigris-mvb-pro-text, serif;
   /* max-width: 1100px; */
@@ -157,6 +161,17 @@ section {
 }
 .CTA-button.third:hover {
   background: var(--light-goldish);
+}
+a.CTA-button.third {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button-series {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  text-align: center;
 }
 .childcare {
   background: var(--goldish);
@@ -1082,6 +1097,10 @@ h4 {
   text-shadow: 0px 0px 5px rgba(0,0,0,.5), 0px 0px 50px rgba(0,0,0,1), 0px 0px 50px rgba(0,0,0,1);
 }
 
+.height-shorten {
+  margin-bottom: 20px;
+}
+
 .splash-text .info-icon {
   display: inline-block;
   justify-content: center;
@@ -1360,11 +1379,6 @@ input:checked + label {
       width: unset;
       max-width: unset;
       padding: 8px;
-  }
-
-  a.CTA-button.third {
-      display: block;
-      margin-bottom: 10px;
   }
 
   img.condensed-image {
