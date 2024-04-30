@@ -259,7 +259,6 @@ section {
     margin-right: auto;
     margin-top: -50px;
     margin-bottom: 50px;
-    padding-bottom: 0px !important;
     width:100%; 
   }
 }
@@ -510,7 +509,7 @@ h4 {
   text-align: center;
   color: white;
   padding-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
 
 .event button {
