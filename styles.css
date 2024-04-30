@@ -123,32 +123,15 @@ section {
   flex-shrink: 0;
 }
 
-.CTA-button-center {
-  display: inline-block;
-  background: var(--goldish);
-  border: 0px solid;
-  opacity: 50%;
-  /* font-style: italic; */
-  padding: 24px;
-  border-radius: 6px;
-  margin-top: 16px;
-  margin-bottom: 24px;
-  color: white;
-  text-transform: uppercase;
-
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-.CTA-button-center:hover {
-  opacity: 50%;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-}
-
 .CTA-button {
   padding: 10px 15px;
   border-radius: 5px;
   margin-right: 10px;
+}
+.CTA-button.center {
+  margin: 0 auto;
+  display: block;
+  max-width: 240px;
 }
 
 .CTA-button.primary {
@@ -167,13 +150,28 @@ section {
 .CTA-button.third {
   background: var(--goldish);
   color: white;
-  margin-right: 10px;
   font-size: 24px;
   padding: 12px 18px;
   opacity: 100%;
 }
 .CTA-button.third:hover {
   background: var(--light-goldish);
+}
+.childcare {
+  background: var(--goldish);
+  display: block;
+  color: white;
+  min-width:220px;
+  text-align: center;
+}
+.childcare h3 {
+  color: white;
+}
+.childcare em {
+  opacity: .8;
+}
+.child-price {
+  margin-left:20px;
 }
 
 .top-image {
@@ -196,7 +194,7 @@ section {
 
 .background-image {
   /* background-image: './background-wide-1.jpg'; */
-  background-image: url('https://res.cloudinary.com/lesswrong-2-0/image/upload/v1714179111/background_ixsjp9.jpg');
+  background-image: url('https://res.cloudinary.com/lesswrong-2-0/image/upload/v1714180330/background_x2n8v1.jpg');
   background-position: center top;
   background-repeat: no-repeat;
   /* background-size: contain; */
@@ -214,20 +212,22 @@ section {
 }
 
 .gallery-photo {
-  width: 333px;
-  height: 333px;
+  width: 290px;
+  height: 290px;
   object-fit: cover;
   margin: 10px;
   border-radius: 5px;
 }
 
-.gallery-photo.large {
-  width: 375px;
-  height: 375px;
+.gallery-photo.small {
+  width: 260px;
+  object-position: right;
+  height: 290px;
 }
 
-.splash-section {
-  margin-bottom: 50px;
+.gallery-photo.large {
+  width: 333px;
+  height: 333px;
 }
 
 .splash-text {
@@ -1249,7 +1249,7 @@ input:checked + label {
   margin-top: 0px;
 }
 
-.ticket label {
+.ticket label, .child-ticket {
   display: flex;
   height: 100%;
   /* align-items: center; */
@@ -1389,4 +1389,10 @@ input:checked + label {
 
 }
 
+.ticket-price-note {
+  color: white;
+  opacity: .8;
+  font-size: 14px;
+  margin-top:2px;
+}
 
