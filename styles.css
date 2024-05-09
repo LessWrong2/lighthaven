@@ -1520,7 +1520,7 @@ input:checked + label {
   opacity: .8;
   font-size: 28px;
   margin-top:2px;
-  text-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
+  text-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
 }
 
 navigation {
