@@ -122,7 +122,7 @@
               target="_blank">
               Buy Tickets
             </a>
-          <div class="ticket-price-note">Prices will increase <span id="ticket-price-note-date">on May 13th</span></div>
+          <div class="ticket-price-note">Prices will increase <span id="ticket-price-note-date">this Monday, May 13th.</span></div>
         </div>
       </div>
     </section>
@@ -611,6 +611,17 @@
       // Scroll to the tickets-section smoothly
       ticketsSection.scrollIntoView({ behavior: 'smooth' });
     }
+  </script>  <script>
+    function updatePriceNote() {
+      const ticketPriceNoteDate = new Date("2024-05-14");
+      const daysRemaining = (ticketPriceNoteDate - new Date()) / (1000 * 60 * 60 * 24);
+      if (daysRemaining > 1) {
+        document.getElementById('ticket-price-note-date').innerHTML = `in ${Math.round(daysRemaining)} days`;
+      } else {
+        document.getElementById('ticket-price-note-date').innerHTML = `today`;
+      }
+    }
+    updatePriceNote();
   </script>
 </body>
 
