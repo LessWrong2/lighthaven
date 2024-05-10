@@ -157,6 +157,7 @@ section {
   font-size: 24px;
   padding: 12px 18px;
   opacity: 100%;
+  max-width: 100%;
   display: block;
 }
 .CTA-button.third:hover {
@@ -1548,10 +1549,8 @@ navigation a {
 }
 
 @media screen and (max-width: 800px) {
-  navigation a {
-    font-size: 16px;
-    padding: 6px;
-    margin: 0;
+  navigation {
+    display: none;
   }
 }
 
