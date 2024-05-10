@@ -159,6 +159,15 @@ section {
   opacity: 100%;
   display: block;
 }
+
+@media screen and (max-width: 750px) {
+  .CTA-button.third {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .CTA-button.third:hover {
   background: var(--light-goldish);
 }
@@ -1598,10 +1607,18 @@ navigation a {
 }
 
 @media screen and (max-width: 800px) {
-  navigation a {
-    font-size: 16px;
-    padding: 6px;
-    margin: 0;
+  navigation {
+    display: none;
   }
+}
+
+.redBar {
+  top: 47;
+  text-align: center;
+  background-color: lch(61.17 61.87 45.15 / 0.8);
+  padding: 10px;
+  color: white;
+  z-index: 2;
+  font-size: 25px;
 }
 
