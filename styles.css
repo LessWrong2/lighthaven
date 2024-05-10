@@ -1525,10 +1525,10 @@ input:checked + label {
 
 .ticket-price-note {
   color: black;
-
   opacity: .8;
-  font-size: 28px;
-  margin-top:30px;
+  font-size: 24px;
+  margin-bottom: -30px;
+  margin-top: 25px;
   text-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
 }
 
