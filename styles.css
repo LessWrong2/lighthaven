@@ -1556,9 +1556,13 @@ navigation a {
   text-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 5px rgba(255,255,255,0.5), 0 0 5px rgba(255,255,255,0.5);
 }
 
-@media screen and (max-width: 800px) {
-  navigation {
-    display: none;
-  }
+.thing {
+  top: 47;
+  text-align: center;
+  background-color: lch(61.17 61.87 45.15 / 0.8);
+  padding: 10px;
+  color: white;
+  z-index: 2;
+  font-size: 28px;
 }
 
