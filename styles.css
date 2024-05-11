@@ -311,16 +311,18 @@ a.CTA-button.third {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  /* flex-wrap:wrap; */
   width: 100%;
   overflow: hidden;
-  margin-top: -100px;
+  margin: 50px 0;
+  overflow: auto;
 }
 
 .gallery-photo {
-  width: 290px;
-  height: 290px;
+  /* width: 290px;
+  height: 290px; */
   object-fit: cover;
-  margin: 10px;
+  margin: 8px;
   border-radius: 5px;
 }
 
@@ -1572,7 +1574,6 @@ navigation a {
   justify-content: flex-start;
   position: relative;
   color: rgb(51, 49, 49);
-  background-color: white;
   font-size: 14px;
   flex-shrink: 0;
   /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
