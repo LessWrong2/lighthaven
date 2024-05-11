@@ -1556,6 +1556,75 @@ navigation a {
   text-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 5px rgba(255,255,255,0.5), 0 0 5px rgba(255,255,255,0.5);
 }
 
+.sessions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.session {
+  max-width: 280px;
+  width: 20vw;
+  margin: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: rgb(51, 49, 49);
+  background-color: white;
+  font-size: 14px;
+  flex-shrink: 0;
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  /* text-shadow: 0 0 10px black, 0 0 10px black; */
+}
+
+.session img {
+  width: 100%;
+  border-radius:3px;
+  height: 500px;
+  object-fit: cover;
+  /* box-shadow: inset 0 0 20px rgba(255,255,255,1); */
+  /* mask-image: linear-gradient(to top, rgba(0,0,0,.3), black 40%, black 40%, rgba(0,0,0,.3)); */
+}
+
+.session img.poster {
+  width: 300px;
+  border-radius:3px;
+  height: 500px;
+  object-fit: cover;
+  /* box-shadow: inset 0 0 20px rgba(255,255,255,1); */
+  /* mask-image: linear-gradient(to top, rgba(0,0,0,.3), black 40%, black 40%, rgba(0,0,0,.3)); */
+}
+.session img:hover { 
+  mask-image: unset;
+}
+
+.session h3 {
+  margin-top: 26px;
+  font-size: 20px;
+  text-align: center; 
+  color: #888 !important;
+}
+
+.session p {
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  color: #777;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 240px;
+}
+
+.session a {
+  color: rgb(175, 111, 7);
+}
+@media screen and (max-width: 800px) {
+  .session p {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 800px) {
   navigation {
     display: none;
@@ -1571,4 +1640,3 @@ navigation a {
   z-index: 2;
   font-size: 25px;
 }
-
