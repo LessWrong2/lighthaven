@@ -1620,7 +1620,7 @@ navigation a {
   color: rgb(175, 111, 7);
 }
 @media screen and (max-width: 800px) {
-  session p {
+  .session p {
     display: none;
   }
 }
