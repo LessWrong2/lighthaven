@@ -643,12 +643,12 @@
     }
   </script>  <script>
     function updatePriceNote() {
-      const ticketPriceNoteDate = new Date("2024-05-14");
-      const daysRemaining = (ticketPriceNoteDate - new Date()) / (1000 * 60 * 60 * 24);
+      const ticketPriceNoteDate = new Date("2024-05-15");
+      const daysRemaining = Math.round((ticketPriceNoteDate - new Date()) / (1000 * 60 * 60 * 24));
       if (daysRemaining > 1) {
-        document.getElementById('ticket-price-note-date').innerHTML = `in ${Math.round(daysRemaining)} day`;
+        document.getElementById('ticket-price-note-date').innerHTML = `in ${daysRemaining} days`;
       } else {
-        document.getElementById('ticket-price-note-date').innerHTML = `today`;
+        document.getElementById('ticket-price-note-date').innerHTML = `in 1 day`;
       }
     }
     updatePriceNote();
