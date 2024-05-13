@@ -246,7 +246,7 @@ a.CTA-button.third {
 
 .guest-photo-wrapper {
   flex-shrink: 0;
-  width: 200px;
+  width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -257,8 +257,8 @@ a.CTA-button.third {
 }
 
 .guest-photo {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
   margin: 10px;
@@ -276,21 +276,23 @@ a.CTA-button.third {
   width: 200px;
 }
 
-@media (max-width: 1000px) {
+/* it's hard to get the faces to look nice at all screen widths */
+@media (max-width: 1777px) {
   .guests {
     width: 100vw;
   }
   .guest-photo-wrapper {
-    width: 120px;
+    width: 180px;
   }
   .guest-photo {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
   }
   .guest-name-subtitle {
-    width: 120px;
+    width: 160px;
   }
 }
+
 @media (max-width: 1687px) {
   .guests {
     width: 100vw;
@@ -306,6 +308,55 @@ a.CTA-button.third {
     width: 160px;
   }
 }
+
+@media (max-width: 1517px) {
+  .guests {
+    width: 100vw;
+  }
+  .guest-photo-wrapper {
+    width: 200px;
+  }
+  .guest-photo {
+    width: 200px;
+    height: 200px;
+  }
+  .guest-name-subtitle {
+    width: 160px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .guests {
+    width: 100vw;
+  }
+  .guest-photo-wrapper {
+    width: 160px;
+  }
+  .guest-photo {
+    width: 160px;
+    height: 160px;
+  }
+  .guest-name-subtitle {
+    width: 160px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .guests {
+    width: 100vw;
+  }
+  .guest-photo-wrapper {
+    width: 120px;
+  }
+  .guest-photo {
+    width: 120px;
+    height: 120px;
+  }
+  .guest-name-subtitle {
+    width: 120px;
+  }
+}
+
 
 .gallery {
   display: flex;
