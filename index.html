@@ -103,9 +103,7 @@
       <a href="#housing">Housing</a>
       <a href="#FAQ">FAQ</a>
     </navigation>
-    <div class="redBar">
-      Prices will increase midnight on Monday, May 13th.</span>
-    </div>
+
     <section class="splash-section">
       <div class="splash-text">
         <h1>LessOnline</h1>
@@ -338,7 +336,6 @@
     <section class="tickets-section" id="tickets-section">
       <h2 class="title">Buy Tickets</h2>
       <p class="ticket-info">Tickets include (a) admission to the Lighthaven venue, (b) lunch, dinner, and snacks, and (c) many talks, workshops, and events. Housing and childcare can be purchased separately below.</p>
-      <div class="ticket-price-note">Prices will increase <span id="ticket-price-note-date">this Monday, May 13th.</span></div>
       <div class="ticket-row">
         <div class="ticket">
           <input type="checkbox" id="lessOnlineCheckbox">
@@ -346,7 +343,7 @@
             <h3><b>LessOnline</b></h3>
             <h4>Fri May 31 - Sun Jun 2</h4>
             
-            <div class="price">$400</div>
+            <div class="price">$500</div>
             <div class="price-subtitle">...minus your LessWrong karma in cents</div>
 
             <!-- <ul>
@@ -362,8 +359,8 @@
           <label for="summerCampCheckbox">
             <h3><b>Summer Camp</b></h3>
             <h4>Mon Jun 3 - Fri Jun 7</h4>
-            <div class="price">$250</div>
-            <div class="price-subtitle">...or $150 with tickets to both LessOnline & Manifest</div>
+            <div class="price">$400</div>
+            <div class="price-subtitle">...or $250 with tickets to both LessOnline & Manifest</div>
             <!-- <ul>
               <li>Admission to the Lighthaven venue</li>
               <li>Coworking space, workshops, and talks</li>
@@ -376,8 +373,8 @@
           <label for="manifestCheckbox">
             <h3><b>Manifest</b></h3>
             <h4>Fri Jun 7 - Sun Jun 9</h4>
-            <div class="price">$399</div>
-            <div class="price-subtitle">...or $300 with a LessOnline ticket<br/>
+            <div class="price">$500</div>
+            <div class="price-subtitle">...or $350 with a LessOnline ticket<br/>
               ...or <a href="https://www.tickettailor.com/events/manifoldmarketsinc/1166167" target="_blank" style="color:var(--goldish)">pay for Manifest using Mana</a></div>
             <!-- <ul>
               <li>Admission to the Lighthaven venue</li>
@@ -425,7 +422,7 @@
         <p>This gets you a single day's access to the Lighthaven Campus (either Saturday or Sunday, your choice), 2 hot-meals and snacks, and access to all sessions happening that day.</p>
         <a href="https://buy.stripe.com/dR69Eh9GmgHD5gI7sH" class="CTA-button third button-series"
           target="_blank">
-          LessOnline Day Pass: $275
+          LessOnline Day Pass: $350
         </a>
       </div>
     </section>
@@ -551,23 +548,23 @@
         var link = 'https://www.tickettailor.com/events/manifoldmarketsinc/1166167';
         if (lo && !sc && !m) {
           link = lessOnlineTicketLink;
-          price = 400;
+          price = 500;
         } else if (lo && !sc && m) {
           link = lessOnlineManifestTicketLink;
-          price = 700;
+          price = 850;
         } else if (lo && sc && !m) {
           link = lessOnlineSummerCampTicketLink;
-          price = 650;
+          price = 900;
         } else if (lo && sc && m) {
           link = allThreeTicketLink;
-          price = 850;
+          price = 1100;
         } else if (sc && m) {
           link = manifestTicketLink;
-          price = 649;
+          price = 900;
         } else if (sc) {
-          price = 250;
+          price = 400;
         } else if (m) {
-          price = 399;
+          price = 500;
         } else if (!lo && !sc && !m) {
           link = '#';
           
