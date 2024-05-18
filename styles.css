@@ -1732,6 +1732,11 @@ navigation a {
   margin-top: 0;
 }
 
+.support-ticket p, .day-pass-ticket p {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
 .price {
   font-size: 17px;
   font-weight: 600;
