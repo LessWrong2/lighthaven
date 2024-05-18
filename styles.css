@@ -1692,3 +1692,29 @@ navigation a {
   z-index: 2;
   font-size: 25px;
 }
+
+.bonus-ticket-section {
+  display: flex;
+  justify-content: center;
+}
+
+.support-ticket, .day-pass-ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px #000;
+  width: 500px;
+  padding: 40px;
+  margin: 20px 0;
+}
+
+.support-ticket h3, .day-pass-ticket h3 {
+  margin-top: 0;
+}
+
+.bonus-ticket-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
