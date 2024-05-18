@@ -1693,9 +1693,26 @@ navigation a {
   font-size: 25px;
 }
 
-.bonus-ticket-section {
+.additional-ticket-section {
   display: flex;
   justify-content: center;
+}
+
+.additional-ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--goldish);
+  color: white;
+  padding: 12px 24px;
+  min-width: 150px;
+  border-radius: 3px;
+}
+
+.additional-ticket h3 {
+  margin-top: 0;
+  color: white;
 }
 
 .support-ticket, .day-pass-ticket {
@@ -1703,14 +1720,23 @@ navigation a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: solid 1px #000;
-  width: 500px;
-  padding: 40px;
-  margin: 20px 0;
+  width: 350px;
+  padding: 20px;
+  font-size: .9em;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .support-ticket h3, .day-pass-ticket h3 {
   margin-top: 0;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: -10px;
+  opacity: .7;
 }
 
 .bonus-ticket-image {
