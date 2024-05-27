@@ -232,6 +232,11 @@ a.CTA-button.third {
   margin: 75px 0 25px 0;
 }
 
+
+p a.green {
+  color: var(--green);
+}
+
 .guests {
   display: flex;
   flex-direction: row;
