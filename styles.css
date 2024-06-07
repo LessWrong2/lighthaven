@@ -24,7 +24,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--goldish);
 }
 
 a:hover {
@@ -234,6 +234,10 @@ a.CTA-button.third {
 
 
 p a.green {
+  color: var(--green);
+}
+
+.green {
   color: var(--green);
 }
 
