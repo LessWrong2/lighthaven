@@ -88,6 +88,7 @@ h1 {
   font-style: italic;
   display: inline-block;
   flex-shrink: 0;
+  padding: 0 12px;
 }
 
 .CTA-button-center {
@@ -509,6 +510,7 @@ h4 {
 .modal-photo {
   max-height:95vh;
 }
+
 
 @media (max-width: 500px) { 
   .CTA-button-navbar {
