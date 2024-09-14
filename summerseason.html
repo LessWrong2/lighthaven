@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,21 +72,22 @@
   <section class="schelling-season-section">
     <div class="opening-text">
 
-      <p>The time is upon us again. We do not have that many events at lighthaven coming over the next few months,
-        although we do have a few. Between these events, we would like to open up our venue for staying over as well as
-        for coworking.
-      </p>
-      <p>During this period we will have a schedule up which will be displayed throughout the venue. Multiple of our
-        spaces will be setup as session spaces, and the content on the schedule will be created by you. If you join our
-        SEASON, you will have the ability to add sessions to our schedule, and people might even show up to them.
+      <p>The campus calls out for occupation. Its hollow cavities seek to shelter you. It beckons you to consume its offerings, and in turn, sustain it. Will you come at its request, or remain exposed to the wild irrational winds of the outer world.</p>
 
-      </p>
+      <p>All of the fire pits around campus are lit this evening.</p>
 
-      <ul>
-        <li>You can visit up to 3 days for free.</li>
-        <li>General Access: <em>$35/day ($200/week)</em></li>
-        <li>Bedrooms and Offices: <em>Additional $50 - $100/day ($250 - $500/week)</em></li>
-      </ul>
+      <p>You smell the angel’s trumpet blooming in a final attempt to replicate before its flowers die and it conserves its energies for next year.</p>
+
+      <p>The music boys are covering all of Neutral Milk Hotel’s “In The Aeroplane Over The Sea” in order again. They might get through it without looking up the lyrics this time, although of course their voices still won’t crack quite right when they get to the mid section of “Oh Comely”.</p>
+
+      <p>A couple of alignment researchers play Go by the cabinet of curiosities as they argue about whether the control paradigm would help in the real world. You know that it makes no sense to judge who is right about the argument based on who is winning the game, but you can’t help it. You remind yourself that the agent foundations researcher gave the MATS scholar a handicap of four.</p>
+
+      <p>A controversial popular internet personality is talking to a molecular biology PhD about what it would take to get hundreds of thousands of human genomes into a dataset so that they could make superbabies. They are considering a product that tells you which celebrity you are genetically closest to. You begin to doubt your own sanity as you start to think that their plan might not only work, but that it might be the most important thing you could work on.</p>
+
+      <div id="claude-response-container">
+        <div id="request-button"><em>Generate more campus vibes...</em></div>
+        <div id="claude-response"></div>
+      </div>
 
     </div>
   </section>
@@ -297,6 +299,57 @@
       <div id="next-button" class="carousel-button">&#10095;</div>
     </div>
   </div>
+
+  <!-- Add this where you want the input fields and button -->
+  <div style="margin: 20px;">
+    <button id="request-button" style="padding: 10px 20px;">Execute Command</button>
+  </div>
+  <div id="result" style="white-space: pre-wrap; margin: 20px;"></div>
+
+  <!-- Include your client-side JavaScript code -->
+  <script>
+    document.getElementById('request-button').addEventListener('click', async () => {
+      // Loading spinner on click
+      document.getElementById('request-button').innerHTML = '<div class="loading-spinner">Loading...</div>';
+
+      const responseContainer = document.getElementById('claude-response');
+      responseContainer.innerHTML = ''; // Clear previous response
+
+      try {
+        const response = await fetch('http://localhost:3000/api/rationalism-gothic-completions', {
+          method: 'GET',
+        });
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value);
+          const lines = chunk.split('\n');
+          
+          for (const line of lines) {
+            if (line.startsWith('data: ')) {
+              const data = JSON.parse(line.slice(6));
+              if (data.type === 'content_block_start' || data.type === 'content_block_delta') {
+                const text = data.delta?.text || '';
+                const formattedText = text.replace(/\n/g, '<br>');
+                responseContainer.innerHTML += formattedText;
+              }
+            }
+          }
+        }
+
+        // Remove loading spinner
+        document.getElementById('request-button').innerHTML = '<em>Generate more campus vibes...</em>';
+      } catch (error) {
+        console.error('Error:', error);
+        responseContainer.textContent = 'An error occurred: ' + error.message;
+      }
+    });
+  </script>
 </body>
 </html>
 

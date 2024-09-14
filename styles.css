@@ -718,11 +718,14 @@ h4 {
   max-width: 500px;
   margin: auto;
   margin-bottom: 25px;
-  font-size: 1.2rem;
+  font-size: 18px;
   padding: 10px;
   /* color: white; */
   text-shadow: 0 0 5px white;
   text-align: justify;
+  font-family: verdigris-mvb-pro-text, serif;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .CTA-button.summer-season-cta-button {
@@ -762,4 +765,11 @@ h4 {
     width: 200px;
     height: 200px;
   }
+}
+
+#request-button {
+  font-style: italic;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
 }
