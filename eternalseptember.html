@@ -335,7 +335,7 @@
 
   <!-- Include your client-side JavaScript code -->
   <script>
-    document.getElementById('request-button').addEventListener('click', async () => {
+    const generateMoreCampusVibes = async () => {
       // Loading spinner on click
       document.getElementById('request-button').innerHTML = '<div class="loading-spinner">Loading...</div>';
 
@@ -364,6 +364,13 @@
                 const text = data.delta?.text || '';
                 const formattedText = text.replace(/\n/g, '<br>');
                 responseContainer.innerHTML += formattedText;
+              } else if (data.type === 'message_stop') {
+                // After a content block ends, add a button to generate more
+                responseContainer.innerHTML += `<br>
+                  <br>
+                  <a href="#request-button" id="request-button-more"><em>Generate more</em></a>
+                `
+                document.getElementById('request-button-more').addEventListener('click', generateMoreCampusVibes);
               }
             }
           }
@@ -375,7 +382,9 @@
         console.error('Error:', error);
         responseContainer.textContent = 'An error occurred: ' + error.message;
       }
-    });
+    }
+    // Add a button to generate more campus vibes
+    document.getElementById('request-button').addEventListener('click', generateMoreCampusVibes);
   </script>
 </body>
 
