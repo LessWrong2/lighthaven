@@ -90,13 +90,25 @@
       </p>
 
 
-      <p>If you would like to know some facts about what it would be like to come to Eternal September, please read our
-        FAQ below. If you would like to know more about what the general vibe will be like, please click the button
-        below.</p>
+      <p>If you would like to know some facts about what it would be like to come to Eternal September, please read <a href="#faq">our
+        FAQ</a> below. If you would like to know more about what the general vibe will be like, keep reading.</p>
+
+      <hr>
+
+      <p>All of the fire pits around campus are lit this evening.</p>
+
+      <p>You smell the angel's trumpet blooming in a final attempt to replicate before its flowers die and it conserves its energies for next year.</p>
+
+      <p>The music boys are covering all of Neutral Milk Hotel's "In The Aeroplane Over The Sea" in order again. They might get through it without looking up the lyrics this time, although of course their voices still won't crack quite right when they get to the mid section of "Oh Comely".</p>
+
+      <p>A couple of alignment researchers play Go by the cabinet of curiosities as they argue about whether the control paradigm would help in the real world. You know that it makes no sense to judge who is right about the argument based on who is winning the game, but you can't help it. You remind yourself that the agent foundations researcher gave the MATS scholar a handicap of four.</p>
+
+      <p>A controversial popular internet personality is talking to a molecular biology PhD about what it would take to get hundreds of thousands of human genomes into a dataset so that they could make superbabies. They are considering a product that tells you which celebrity you are genetically closest to. You begin to doubt your own sanity as you start to think that their plan might not only work, but that it might be the most important thing you could work on.</p>
+
       <div class="claude-response-hacky-parent">
         <div id="claude-response-container">
           <div id="request-button">
-          <em>Generate campus vibes</em>
+          <em>Generate more campus vibes</em>
           </div>
           <div id="claude-response"></div>
         </div>
@@ -331,7 +343,7 @@
       responseContainer.innerHTML = ''; // Clear previous response
 
       try {
-        const response = await fetch('https://www.havenbookings.space/api/rationalism-gothic-completions', {
+        const response = await fetch('http://localhost:3000/api/rationalism-gothic-completions', {
           method: 'GET',
         });
 
