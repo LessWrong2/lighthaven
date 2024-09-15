@@ -768,14 +768,14 @@ h4 {
 }
 
 #request-button {
-  font-style: italic;
+  /* font-style: italic; */
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   /* color: #888; */
   border: 1px solid black;
   border-radius: 10px;
   text-align: center;
-  background: #ccc;
+  /* background: #ccc; */
   color: black;
   transition: all 0.2s ease-in-out;
   display: center;
@@ -784,7 +784,9 @@ h4 {
 }
 
 #request-button:hover {
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); */
+  border-color: grey;
+  background-color: rgba(0,0,0,0.05);
 }
 
 .claude-response-hacky-parent {
