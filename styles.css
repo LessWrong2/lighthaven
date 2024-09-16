@@ -263,6 +263,7 @@ h3 {
 .content-area {
   display: flex;
   flex-direction: column;
+  color: black;
 }
 
 .event {
@@ -754,6 +755,7 @@ h4 {
   margin-bottom: 25px;
   margin-top: 15px;
   min-width: 100%;
+  color: black;
 }
 
 .faq p {
