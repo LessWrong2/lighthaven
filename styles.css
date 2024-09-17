@@ -680,6 +680,7 @@ h4 {
   margin: 0 auto;
   /* margin-top: 80px; */
   padding: 24px;
+  padding-bottom: 0px;
   /* color: white; */
   color: black;
   text-wrap: pretty;
