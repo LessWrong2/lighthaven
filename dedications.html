@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecting to Payment</title>
+    <meta http-equiv="refresh" content="0; url=https://docs.google.com/document/d/1dP5rA4JoVdsmP26i58H5MNc7lldo87kYuv1vqoCbXLI/">
+    <!-- Include your existing stylesheet links -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include any additional fonts or icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://use.typekit.net/tlf2euo.css">
+  </head>
+  <body>
+    <style>
+      /* Loading Spinner Styles */
+      .loading-spinner {
+        border: 12px solid #f3f3f3;          /* Light grey */
+        border-top: 12px solid #3498db;      /* Blue */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+        margin: 100px auto;                  /* Center vertically and horizontally */
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="index.html" class="logo">
+        <img class="logo-image"
+          src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1629334277/Lightcone-02_stkgik.svg"
+        />
+        <div class="navbar-title">Lighthaven</div>
+      </a>
+      <a href="https://airtable.com/your-inquiry-link" class="CTA-button-navbar" target="_blank">
+        Submit an inquiry
+      </a>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content-area">
+      <section class="center-section">
+        <!-- Loading Spinner -->
+        <div class="loading-spinner"></div>
+      </section>
+    </div>
+  </body>
+</html>
