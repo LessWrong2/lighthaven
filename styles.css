@@ -1720,6 +1720,7 @@ navigation a {
   padding: 12px 24px;
   min-width: 150px;
   border-radius: 3px;
+  margin-top: auto;
 }
 
 .additional-ticket h3 {
@@ -1734,10 +1735,10 @@ navigation a {
   justify-content: space-between;
   width: 350px;
   padding: 20px;
-  font-size: .9em;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 5px;
+  height: 275px;
 }
 
 .support-ticket h3, .day-pass-ticket h3 {
@@ -1745,7 +1746,7 @@ navigation a {
 }
 
 .support-ticket p, .day-pass-ticket p {
-  margin-top: -10px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1766,4 +1767,93 @@ navigation a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.testimonials-section {
+  padding: 40px 20px;
+  background-color: var(--background-color);
+  margin-bottom: 30px;
+}
+
+.testimonials-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: var(--text-color);
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.testimonial-author {
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--goldish);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.testimonial-author-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    min-width: 100%;
+  }
+}
+
+.testimonial-author a {
+  color: var(--goldish);
+  text-decoration: underline;
+}
+
+.testimonial-author a:hover {
+  color: var(--light-goldish);
+}
+
+.price-subtitle {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.ticket-content {
+  margin-bottom: 15px;
+}
+
+.support-ticket, .day-pass-ticket {
+  justify-content: flex-start;
 }
