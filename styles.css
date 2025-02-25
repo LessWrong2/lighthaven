@@ -1501,7 +1501,11 @@ input:checked + label {
 }
 
 .price {
-  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--goldish);
+  display: inline;
+  margin-left: 10px;
 }
 
 @media (max-width: 800px) {
@@ -1730,14 +1734,13 @@ navigation a {
 .support-ticket, .day-pass-ticket {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   width: 350px;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 5px;
-  height: 275px;
+  height: 450px; /* Increased height to accommodate the images */
 }
 
 .support-ticket h3, .day-pass-ticket h3 {
@@ -1750,10 +1753,11 @@ navigation a {
 }
 
 .price {
-  font-size: 17px;
-  font-weight: 600;
-  margin-top: -10px;
-  opacity: .7;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--goldish);
+  display: inline;
+  margin-left: 10px;
 }
 
 .bonus-ticket-image {
@@ -1843,16 +1847,39 @@ navigation a {
 }
 
 .price-subtitle {
-  font-size: 16px;
-  opacity: 0.8;
-  margin-top: -5px;
+  font-size: 16px; /* Explicitly set font size */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ticket-header h3 {
+  font-size: 20px; /* Control the title size */
   margin-bottom: 10px;
 }
 
 .ticket-content {
-  margin-bottom: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.support-ticket, .day-pass-ticket {
-  justify-content: flex-start;
+.ticket-image {
+  width: 300px; /* Back to original size */
+  height: 300px;
+  display: block;
+  margin: 10px auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.ticket-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ticket-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }

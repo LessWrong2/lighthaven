@@ -118,9 +118,9 @@
         <div class="info"><em>Berkeley, CA, Lighthaven: May 30 - Jun 1, 2025</em>
         </div>
         <div class="cta-row">
-            <a href="#" onclick="scrollToTicketsSection()" class="CTA-button third center"
+            <a href="#tickets" onclick="scrollToTicketsSection()" class="CTA-button third center"
               target="_blank">
-              Event is Over
+              Get Ticket ($450)
             </a>
         </div>
       </div>
@@ -354,28 +354,26 @@
       <p class="ticket-info" style="text-align: center; margin-left: auto; margin-right: auto; max-width: 750px;">Tickets include (a) admission to the Lighthaven venue, (b) lunch, dinner, and snacks, and (c) many talks, workshops, and events.</p>
     </div>
 
-    <section class="additional-ticket-section" id="day-passes" style="padding-top: 0;">
-      <div class="day-pass-ticket">
+    <section class="additional-ticket-section" id="tickets" style="padding-top: 0;">
+      <a href="https://buy.stripe.com/dR69Eh9GmgHD5gI7sH" class="day-pass-ticket ticket-link" target="_blank">
         <div class="ticket-content">
-          <h3 class="title" style="margin-bottom: 30px;"><b>Early-Bird Ticket</b></h3>
-          <p class="price-subtitle">A single day's access to LessOnline (either Saturday or Sunday, your choice), 2 hot-meals and snacks, and access to all sessions happening that day.</p>
+          <div class="ticket-header">
+            <h3 class="title" style="margin-bottom: 10px;"><b>Early-Bird Ticket</b> <span class="price">$450</span></h3>
+          </div>
+          <img src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1740526729/early_bird_wyk55f.png" alt="Early Bird" class="ticket-image">
+          <p class="price-subtitle">Your ticket to LessOnline! From Friday night to Sunday night.</p>
         </div>
-        <a href="https://buy.stripe.com/dR69Eh9GmgHD5gI7sH" class="additional-ticket"
-          target="_blank">
-          <h3>Early-Bird Ticket</h3>
-          <div class="price">$450</div>
-        </a>
-      </div>
-      <div class="support-ticket">
+      </a>
+      
+      <a href="https://buy.stripe.com/aEU9EhcSycrn10scN3" class="support-ticket ticket-link" target="_blank">
         <div class="ticket-content">
-          <h3 class="title" style="margin-bottom: 30px;"><b>Supporter Ticket</b></h3>
-          <p class="price-subtitle">For those who want to supprt LessWrong to run independently.</p>
+          <div class="ticket-header">
+            <h3 class="title" style="margin-bottom: 10px;"><b>Supporter Ticket</b> <span class="price">$3000</span></h3>
+          </div>
+          <img src="https://res.cloudinary.com/lesswrong-2-0/image/upload/v1740526729/watering_garden_nwk2ws.png" alt="Watering Garden" class="ticket-image">
+          <p class="price-subtitle">A ticket for those who want to support LessWrong to run independently.</p>
         </div>
-        <a href="https://buy.stripe.com/aEU9EhcSycrn10scN3" target="_blank" class="additional-ticket" style="margin-top: auto;">
-          <h3>Supporter Ticket</h3>
-          <div class="price">$3000</div>
-        </a>
-      </div>
+      </a>
     </section>
 
 
@@ -595,7 +593,7 @@
       event.preventDefault();
       
       // Find the tickets-section element
-      const ticketsSection = document.getElementById('tickets-section');
+      const ticketsSection = document.getElementById('tickets');
       
       // Scroll to the tickets-section smoothly
       ticketsSection.scrollIntoView({ behavior: 'smooth' });
