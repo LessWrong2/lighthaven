@@ -369,7 +369,6 @@ p a.green {
 
 .gallery {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   /* flex-wrap:wrap; */
   width: 100%;
