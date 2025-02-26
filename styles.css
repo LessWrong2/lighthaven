@@ -135,6 +135,7 @@ section {
 .CTA-button.center {
   margin: 0 auto;
   display: block;
+  width: fit-content;
   max-width: 240px;
 }
 
